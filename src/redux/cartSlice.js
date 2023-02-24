@@ -4,7 +4,7 @@ const initialState = {
   cart: [],
 };
 
-export const counterSlice = createSlice({
+export const cartSlice = createSlice({
   name: 'counter',
   initialState,
   reducers: {
@@ -20,4 +20,4 @@ export const counterSlice = createSlice({
 // Action creators are generated for each case reducer function
 export const { incrremoveCartItem, addCartItem } = counterSlice.actions;
 
-export default counterSlice.reducer;
+export default cartSlice.reducer;
