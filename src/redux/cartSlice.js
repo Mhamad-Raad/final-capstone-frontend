@@ -4,15 +4,15 @@ const initialState = {
   cart: [],
 };
 
-export const cartSlice = createSlice({
-  name: 'counter',
+export const tripsSlice = createSlice({
+  name: 'trips',
   initialState,
   reducers: {
-    addCartItem: (state) => {
+    addTripItem: (state) => {
       state.cart.push(state.payload);
     },
 
-    setCartItems: (state) => {
+    setTripItems: (state) => {
       state.cart = state.payload;
     },
 
@@ -20,6 +20,6 @@ export const cartSlice = createSlice({
 });
 
 // Action creators are generated for each case reducer function
-export const { addCartItem, setCartItems } = cartSlice.actions;
+export const { addTripItem, setTripItems } = tripsSlice.actions;
 
-export default cartSlice.reducer;
+export default tripsSlice.reducer;
