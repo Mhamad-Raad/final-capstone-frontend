@@ -17,9 +17,30 @@ export default function Details() {
         <button className="back_button" type="button">back</button>
       </div>
 
-      <div className="info">
+      <div className="info column">
         <h1>Details</h1>
-        <p>Details</p>
+        <p>subtext</p>
+        <div className="box row">
+          <p>
+            price
+          </p>
+          <p>
+            100$
+          </p>
+        </div>
+
+        <div className="darkbox row">
+          <p>
+            price
+          </p>
+          <p>
+            100$
+          </p>
+        </div>
+
+        <p className="description">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+        </p>
       </div>
     </div>
   );
