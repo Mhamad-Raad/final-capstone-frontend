@@ -18,8 +18,8 @@ export default function Details() {
       </div>
 
       <div className="info column">
-        <h1>Details</h1>
-        <p>subtext</p>
+        <h1 className="info-title">Details</h1>
+        <p className="info-subtitle">subtext</p>
         <div className="box row">
           <p>
             price
@@ -41,6 +41,8 @@ export default function Details() {
         <p className="description">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
         </p>
+
+        <button className="reserve-btn" type="button">Reserve</button>
       </div>
     </div>
   );
