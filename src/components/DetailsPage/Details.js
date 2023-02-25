@@ -1,6 +1,7 @@
 // import { useParams } from 'react-router-dom';
 import { AiOutlineSetting } from 'react-icons/ai';
 import { BsArrowRightCircle } from 'react-icons/bs';
+import { IoChevronBackCircleOutline } from 'react-icons/io5';
 import './Details.css';
 
 // the commented code is for future use
@@ -20,7 +21,9 @@ export default function Details() {
           alt="details"
           className="img"
         />
-        <button className="back_button" type="button">back</button>
+        <button className="back_button" type="button">
+          <IoChevronBackCircleOutline />
+        </button>
       </div>
 
       <div className="info column">
