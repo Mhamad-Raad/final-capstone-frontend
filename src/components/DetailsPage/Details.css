@@ -66,10 +66,13 @@ img {
 }
 
 .reserve-btn {
-  padding: 20px 12px;
+  margin-top: 50px;
+  padding: 20px;
+  width: 160px;
   border: none;
   background-color: cornflowerblue;
   color: white;
   font-size: 18px;
-  border-radius: 50%;
+  border-radius: 50px;
+  justify-content: space-between;
 }

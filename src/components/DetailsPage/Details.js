@@ -1,10 +1,16 @@
 // import { useParams } from 'react-router-dom';
+import { AiOutlineSetting } from 'react-icons/ai';
+import { BsArrowRightCircle } from 'react-icons/bs';
 import './Details.css';
 
 // the commented code is for future use
 
 export default function Details() {
   // const { id } = useParams();
+
+  const reserveHandler = () => {
+    // route to reserve page
+  };
 
   return (
     <div className="details row">
@@ -42,7 +48,11 @@ export default function Details() {
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
         </p>
 
-        <button className="reserve-btn" type="button">Reserve</button>
+        <button className="reserve-btn row" type="button" onClick={reserveHandler}>
+          <AiOutlineSetting />
+          Reserve
+          <BsArrowRightCircle />
+        </button>
       </div>
     </div>
   );
