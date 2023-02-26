@@ -1,20 +1,15 @@
 import './App.css';
+import { Routes, Route, BrowserRouter as Router } from 'react-router-dom';
+import Signup from './components/Signup';
+import Trips from './components/Trips';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => (
+  <Router>
+    <Routes>
+      <Route exact path="/sign-up" element={<Signup />} />
+      <Route exact path="/trips" element={<Trips />} />
+    </Routes>
+  </Router>
+);
 
 export default App;
