@@ -1,11 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
 import cartItems from './cartSlice';
-import signupSlice from './sign_up/signupSlice';
+import registrationSlice from './reducers/registrationSlice';
 
 const store = configureStore({
   reducer: {
     cartItems,
-    registration: signupSlice,
+    registration: registrationSlice,
   },
 });
 
