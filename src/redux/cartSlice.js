@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  cart: [],
+  trips: [],
 };
 
 export const tripsSlice = createSlice({
@@ -9,13 +9,12 @@ export const tripsSlice = createSlice({
   initialState,
   reducers: {
     addTripItem: (state) => {
-      state.cart.push(state.payload);
+      state.trips.push(state.payload);
     },
 
     setTripItems: (state) => {
-      state.cart = state.payload;
+      state.trips = state.payload;
     },
-
   },
 });
 
