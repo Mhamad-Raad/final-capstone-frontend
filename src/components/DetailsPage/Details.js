@@ -1,4 +1,5 @@
 // import { useParams } from 'react-router-dom';
+// import { useSelector } from 'react-redux';
 import { AiOutlineSetting } from 'react-icons/ai';
 import { BsArrowRightCircle } from 'react-icons/bs';
 import { IoChevronBackCircleOutline } from 'react-icons/io5';
@@ -8,6 +9,10 @@ import './Details.css';
 
 export default function Details() {
   // const { id } = useParams();
+
+  // const trips = useSelector((state) => state.trips.trips);
+
+  // const trip = trips.find((trip) => trip.id === id);
 
   const reserveHandler = () => {
     // route to reserve page

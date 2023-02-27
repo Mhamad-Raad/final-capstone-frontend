@@ -9,6 +9,6 @@ import Details from './components/DetailsPage/Details';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Provider store={store}>
-    <App />
+    <Details />
   </Provider>,
 );
