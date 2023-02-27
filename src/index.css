@@ -1,22 +1,42 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-  background: #f1f1f1;
+:root {
+  --white: #fff;
+  --grey: #b9b9b9;
+  --flax: #edd590;
+  --platinum: #e2e3e5;
+  --cadet-gray: #94a6a4;
+  --yellow-red: #f0bd59;
+  --albaster: #efece6;
+  --overlay: #b5e60ad4;
+  --black-olive: #3b3735;
+  --dark-vanilla: #c3cc9b;
+  --crystal-blue: #62aea3;
+  --dark-lemon-lime: #94b912;
+  --spanish-yellow: #f7b217;
+  --metalic-brown: #ad4708;
+  --metalic-orange: #d46d0d;
+  --principalFont: 'Montserrat', sans-serif;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
   margin: 0;
+  outline: none;
+}
+
+body {
+  height: 100vh;
 }
 
 a {
   text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
+  color: inherit;
 }
 
 .column {
