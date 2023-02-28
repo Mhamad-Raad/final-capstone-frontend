@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 const defaultSlice = {
-  reserve: [],
+  reserved: [],
 };
 
 const getAllReversedTrips = createAsyncThunk(
@@ -12,11 +12,17 @@ const getAllReversedTrips = createAsyncThunk(
 );
 
 const reserveSlice = createSlice({
-  name: 'reserve',
+  name: 'reservations',
   initialState: defaultSlice,
   reducers: {
     addReserveItem: (state, action) => {
-      state.reserve.push(action.payload);
+      state.reserved.push(action.payload);
     },
   },
+  extraReducers: {
+    [getAllReversedTrips.fulfilled]: (state, action) => {
+      state.reserved = action.payload;
+    }
+  }
+
 });
