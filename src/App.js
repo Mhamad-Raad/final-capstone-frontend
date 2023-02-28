@@ -6,7 +6,7 @@ import { useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import Signup from './pages/Signup';
 import SignIn from './pages/SignIn';
-import Trips from './components/Trips';
+// import Trips from './components/Trips';
 import { setToken } from './redux/reducers/registrationSlice';
 import Landing from './pages/Landing';
 
@@ -33,7 +33,7 @@ const App = () => {
     <Routes>
       <Route exact path="/sign-up" element={<Signup />} />
       <Route exact path="/sign-in" element={<SignIn />} />
-      <Route exact path="/trips" element={<Trips />} />
+      {/* <Route exact path="/trips" element={<Trips />} /> */}
       <Route exact path="/" element={<Landing />} />
     </Routes>
   );
