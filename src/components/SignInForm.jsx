@@ -36,18 +36,22 @@ export default function SignInForm() {
 
   return (
     <form>
-      <label htmlFor="email">
-        Email:
-        <input type="email" name="email" onChange={changeEmail} value={email} />
-      </label>
-      <label htmlFor="password">
-        Password:
-        <input type={passwordType} onChange={handlePasswordChange} value={passwordInput} name="password" className="form-control" placeholder="Password" />
-        <button type="button" className="btn btn-outline-primary" onClick={togglePassword}>
-          { passwordType === 'password' ? <AiFillEyeInvisible /> : <AiFillEye /> }
-        </button>
-      </label>
-      <button type="submit" className="submit_btn" onClick={onSubmit}>Log In</button>
+      <div className="form-group">
+        <label htmlFor="email">
+          <input type="email" name="email" required="required" onChange={changeEmail} value={email} />
+          <span>Email</span>
+        </label>
+      </div>
+      <div className="form-group">
+        <label htmlFor="password">
+          <input type={passwordType} required="required" onChange={handlePasswordChange} value={passwordInput} name="password" />
+          <span>Password</span>
+          <button type="button" className="btn btn-outline-primary" onClick={togglePassword}>
+            { passwordType === 'password' ? <AiFillEyeInvisible /> : <AiFillEye /> }
+          </button>
+        </label>
+      </div>
+      <button type="submit" className="submit-btn" onClick={onSubmit}>Log In</button>
     </form>
   );
 }

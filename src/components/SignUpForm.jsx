@@ -76,29 +76,37 @@ export default function SignUpForm() {
 
   return (
     <form>
-      <label htmlFor="name">
-        Name:
-        <input type="text" name="name" onChange={changeName} value={name} />
-      </label>
-      <label htmlFor="email">
-        Email:
-        <input type="email" name="email" onChange={changeEmail} value={email} />
-      </label>
-      <label htmlFor="password">
-        Password:
-        <input type={passwordType} onChange={handlePasswordChange} value={passwordInput} name="password" className="form-control" placeholder="Password" />
-        <button type="button" className="btn btn-outline-primary" onClick={togglePassword}>
-          { passwordType === 'password' ? <AiFillEyeInvisible /> : <AiFillEye /> }
-        </button>
-      </label>
-      <label htmlFor="password">
-        Confirm Password:
-        <input type={confirmPasswordType} onChange={handleConfirmPasswordChange} value={confirmPasswordInput} name="password" className="form-control" placeholder="Password" />
-        <button type="button" className="btn btn-outline-primary" onClick={toggleConfirmPassword}>
-          { confirmPasswordType === 'password' ? <AiFillEyeInvisible /> : <AiFillEye /> }
-        </button>
-      </label>
-      <button type="submit" className="submit_btn" onClick={onSubmit}>Submit</button>
+      <div className="form-group">
+        <label htmlFor="name">
+          <input type="text" name="name" required="required" id="name" onChange={changeName} value={name} />
+          <span>Full Name</span>
+        </label>
+      </div>
+      <div className="form-group">
+        <label htmlFor="email">
+          <input type="email" name="email" required="required" id="email" onChange={changeEmail} value={email} />
+          <span>Email</span>
+        </label>
+      </div>
+      <div className="form-group">
+        <label htmlFor="password">
+          <input type={passwordType} name="password" required="required" onChange={handlePasswordChange} value={passwordInput} />
+          <span>Password</span>
+          <button type="button" className="btn" onClick={togglePassword}>
+            { passwordType === 'password' ? <AiFillEyeInvisible /> : <AiFillEye /> }
+          </button>
+        </label>
+      </div>
+      <div className="form-group">
+        <label htmlFor="password">
+          <input type={confirmPasswordType} name="password" required="required" onChange={handleConfirmPasswordChange} value={confirmPasswordInput} />
+          <span>Confirm Password</span>
+          <button type="button" className="btn" onClick={toggleConfirmPassword}>
+            { confirmPasswordType === 'password' ? <AiFillEyeInvisible /> : <AiFillEye /> }
+          </button>
+        </label>
+      </div>
+      <button type="submit" className="submit-btn" onClick={onSubmit}><span>Sign up</span></button>
     </form>
   );
 }
