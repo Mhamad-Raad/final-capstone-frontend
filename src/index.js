@@ -11,6 +11,6 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 // root.render(<MyReservations />);
 root.render(
   <Provider store={store}>
-    <App />
+    <MyReservations />
   </Provider>,
 );
