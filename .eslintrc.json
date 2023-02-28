@@ -20,8 +20,8 @@
     "import/no-unresolved": "off",
     "no-shadow": "off",
     "no-undef": "off",
-    "react/prop-types": "off",
-    "no-param-reassign": "off"
+    "no-param-reassign": "off",
+    "react/prop-types": "off"
   },
   "ignorePatterns": [
     "dist/",

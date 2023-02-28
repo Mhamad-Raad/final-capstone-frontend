@@ -8,6 +8,7 @@ const getAllReversedTrips = createAsyncThunk(
   'user/myreservations',
   async () => {
     const response = await fetch('http://localhost:3001/reservations');
+    return response;
   }
 );
 
@@ -22,7 +23,6 @@ const reserveSlice = createSlice({
   extraReducers: {
     [getAllReversedTrips.fulfilled]: (state, action) => {
       state.reserved = action.payload;
-    }
-  }
-
+    },
+  },
 });
