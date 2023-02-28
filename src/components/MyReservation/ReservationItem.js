@@ -1,8 +1,12 @@
 import './ReservationItem.css';
 
-export default function ReservationItem() {
+export default function ReservationItem({ delay }) {
+  const styles = {
+    animationDuration: `${delay}s`,
+  };
+
   return (
-    <li className="reservation-item row">
+    <li className="reservation-item row" style={styles}>
       <div className="column">
         <h2 className="destination-city">Destination city</h2>
         <h3 className="departure-city">Departure city</h3>
