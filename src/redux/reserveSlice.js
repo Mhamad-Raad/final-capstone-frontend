@@ -9,7 +9,7 @@ const getAllReversedTrips = createAsyncThunk(
   async () => {
     const response = await fetch('http://localhost:3001/reservations');
     return response;
-  }
+  },
 );
 
 const reserveSlice = createSlice({
@@ -26,3 +26,6 @@ const reserveSlice = createSlice({
     },
   },
 });
+
+export const { addReserveItem } = reserveSlice.actions;
+export default reserveSlice.reducer;
