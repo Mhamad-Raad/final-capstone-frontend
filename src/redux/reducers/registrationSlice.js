@@ -3,8 +3,8 @@ import { signUpThunkReducers } from './signUp';
 import { signInReducer } from './signIn';
 
 const initialState = {
-  token: null,
-  user: {},
+  token: localStorage.getItem('token') || null,
+  user: JSON.parse(localStorage.getItem('user')) || {},
   loading: false,
   error: {
     msg: '',
