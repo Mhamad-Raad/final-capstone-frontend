@@ -1,9 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit';
-import cartItems from './cartSlice';
+import tripItems from './tripSlice';
 
 const store = configureStore({
   reducer: {
-    cartItems,
+    tripItems,
   },
 });
 
