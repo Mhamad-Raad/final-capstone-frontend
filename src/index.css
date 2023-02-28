@@ -28,3 +28,9 @@ a {
   display: flex;
   flex-direction: row;
 }
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}

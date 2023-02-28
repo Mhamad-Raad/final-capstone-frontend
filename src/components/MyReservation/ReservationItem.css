@@ -3,4 +3,33 @@
   align-items: center;
   padding: 0.5rem 1rem;
   border: none;
+  width: 80%;
+}
+
+.reservation-item > div {
+  background-color: #f2f2f2;
+}
+
+.destination-city {
+  font-size: 1rem;
+  font-weight: bolder;
+  color: #000;
+}
+
+.departure-city {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #7c7c7c;
+}
+
+.reservation-price {
+  font-size: 1rem;
+  font-weight: bolder;
+  color: #000;
+}
+
+.reservation-date {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #7c7c7c;
 }
