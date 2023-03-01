@@ -1,24 +1,57 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import axios from 'axios';
 
-const initialState = {
-  trips: [],
-};
+export const fetchTrips = createAsyncThunk('trips/fetchTrips', async () => {
+  const token = localStorage.getItem('token');
+  const config = {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  };
+  const response = await axios.get('http://localhost:4000/api/v1/trips', config);
+  return response.data;
+});
 
-export const tripsSlice = createSlice({
+export const addTrip = createAsyncThunk('trips/addTrip', async (trip) => {
+  const token = localStorage.getItem('token');
+  const config = {
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${token}`,
+    },
+  };
+  const response = await axios.post('http://localhost:4000/api/v1/trips', trip, config);
+  return response.data;
+});
+
+const tripSlice = createSlice({
   name: 'trips',
-  initialState,
+  initialState: {
+    trips: [],
+    status: null,
+  },
   reducers: {
-    addTripItem: (state) => {
-      state.trips.push(state.payload);
+    tripAdded(state, action) {
+      state.trips.push(action.payload);
+    },
+  },
+  extraReducers: {
+    [fetchTrips.pending]: (state) => {
+      state.status = 'loading';
     },
 
-    setTripItems: (state) => {
-      state.trips = state.payload;
+    [fetchTrips.fulfilled]: (state, action) => {
+      state.status = 'succeeded';
+      state.trips = action.payload;
+    },
+
+    [fetchTrips.rejected]: (state, action) => {
+      state.status = 'failed';
+      state.error = action.error.message;
     },
   },
 });
 
-// Action creators are generated for each case reducer function
-export const { addTripItem, setTripItems } = tripsSlice.actions;
+export const { tripAdded } = tripSlice.actions;
 
-export default tripsSlice.reducer;
+export default tripSlice.reducer;
