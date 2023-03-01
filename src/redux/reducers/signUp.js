@@ -9,7 +9,7 @@ export const fetchSignUp = createAsyncThunk(
     { fulfillWithValue, rejectWithValue },
   ) => {
     const signUpResponse = await fetch(
-      'http://localhost:3000/api/v1/auth/sign_up',
+      'http://localhost:4000/api/v1/auth/sign_up',
       {
         method: 'POST',
         headers: {
