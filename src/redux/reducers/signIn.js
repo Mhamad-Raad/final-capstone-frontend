@@ -8,18 +8,21 @@ export const fetchSignIn = createAsyncThunk(
     },
     { fulfillWithValue, rejectWithValue },
   ) => {
-    const signInResponse = await fetch('http://localhost:4000/api/v1/auth/log_in', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        user: {
-          email,
-          password,
+    const signInResponse = await fetch(
+      'http://127.0.0.1:3000/api/v1/auth/log_in',
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
         },
-      }),
-    });
+        body: JSON.stringify({
+          user: {
+            email,
+            password,
+          },
+        }),
+      },
+    );
     const data = await signInResponse.json();
     if (signInResponse.status === 200) {
       navigate('/trips');
