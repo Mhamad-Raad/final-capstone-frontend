@@ -31,18 +31,18 @@ const AddTripForm = () => {
     <form onSubmit={handleSubmit}>
       <div>
         <label htmlFor="price">
-            Price:
-        </label>
+          Price:
         <input
           type="number"
           id="price"
           value={price}
           onChange={(e) => setPrice(e.target.value)}
-        />
+          />
+        </label>
       </div>
       <div>
         <label htmlFor="rating">
-            Rating:
+          Rating:
         </label>
         <input
           type="number"
@@ -53,7 +53,7 @@ const AddTripForm = () => {
       </div>
       <div>
         <label htmlFor="destinationCity">
-            Destination City:
+          Destination City:
         </label>
         <input
           type="text"
@@ -64,7 +64,7 @@ const AddTripForm = () => {
       </div>
       <div>
         <label htmlFor="description">
-            Description:
+          Description:
         </label>
         <textarea
           id="description"
