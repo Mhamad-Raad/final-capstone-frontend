@@ -11,10 +11,10 @@ export default function MyReservations() {
   };
 
   return (
-    <ul className='my-reservations column'>
-      <ReservationItem delay='1' />
-      <ReservationItem delay='1.2' />
-      <ReservationItem delay='1.3' />
+    <ul className="my-reservations column">
+      <ReservationItem delay="1" />
+      <ReservationItem delay="1.2" />
+      <ReservationItem delay="1.3" />
       <button onClick={clickHandler} type="button">hi</button>
     </ul>
   );

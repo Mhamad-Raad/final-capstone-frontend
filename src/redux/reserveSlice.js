@@ -17,7 +17,7 @@ export const getAllReversedTrips = createAsyncThunk(
     const response = data.json();
 
     return response;
-  }
+  },
 );
 
 const reserveSlice = createSlice({
