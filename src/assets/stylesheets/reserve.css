@@ -1,0 +1,7 @@
+.reserve-bg {
+  /* background: url(../images/reserve-bg.jpg) no-repeat center center fixed; */
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}

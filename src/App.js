@@ -10,6 +10,7 @@ import SignIn from './pages/SignIn';
 import { setToken } from './redux/reducers/registrationSlice';
 import Landing from './pages/Landing';
 import MyResevationsPage from './pages/MyResevationsPage';
+import ReserveTrip from './pages/ReserveTrip';
 
 const App = () => {
   const registration = useSelector((store) => store.registration);
@@ -34,6 +35,7 @@ const App = () => {
     <Routes>
       <Route exact path="/sign-up" element={<Signup />} />
       <Route exact path="/sign-in" element={<SignIn />} />
+      <Route exact path="/reservetrip" element={<ReserveTrip />} />
       {/* <Route exact path="/trips" element={<Trips />} /> */}
       <Route exact path="/resevations" element={<MyResevationsPage />} />
       <Route exact path="/" element={<Landing />} />
