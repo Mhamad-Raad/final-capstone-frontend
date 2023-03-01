@@ -1,22 +1,49 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-  background: #f1f1f1;
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
+
+:root {
+  --white: #fff;
+  --grey: #b9b9b9;
+  --flax: #edd590;
+  --red: #e20d0d;
+  --platinum: #e2e3e5;
+  --cadet-gray: #94a6a4;
+  --yellow-red: #f0bd59;
+  --albaster: #efece6;
+  --overlay: #b5e60ab8;
+  --black-olive: #3b3735;
+  --dark-vanilla: #c3cc9b;
+  --crystal-blue: #62aea3;
+  --sea-blue: #69c;
+  --dark-lemon-lime: #94b912;
+  --spanish-yellow: #f7b217;
+  --metalic-brown: #ad4708;
+  --metalic-orange: #d46d0d;
+  --background: #8fb704bd;
+  --principalFont: 'Montserrat', sans-serif;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
   margin: 0;
+  padding: 0;
+  outline: none;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+body {
+  height: 100vh;
 }
 
 a {
   text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
+  color: inherit;
 }
 
 h1,
@@ -38,4 +65,27 @@ button {
 .row {
   display: flex;
   flex-direction: row;
+}
+
+.footer {
+  position: absolute;
+  padding: 0 4.5rem 4.5rem 4.5rem;
+  font-style: italic;
+  bottom: 0;
+  color: var(--metalic-brown);
+  font-size: 1.2rem;
+}
+
+.error-handler {
+  display: flex;
+  flex-direction: column;
+  padding-top: 2rem;
+  font-style: italic;
+  color: var(--red);
+}
+
+.error-msg {
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  filter: drop-shadow(0 1px 0 var(--black-olive));
 }
