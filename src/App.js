@@ -6,7 +6,8 @@ import { useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import Signup from './pages/Signup';
 import SignIn from './pages/SignIn';
-// import Trips from './components/Trips';
+import Home from './components/Home';
+import AddTrip from './components/AddTripForm';
 import { setToken } from './redux/reducers/registrationSlice';
 import Landing from './pages/Landing';
 import MyResevationsPage from './pages/MyResevationsPage';
@@ -38,6 +39,8 @@ const App = () => {
       <Route exact path="/reservetrip" element={<ReserveTrip />} />
       {/* <Route exact path="/trips" element={<Trips />} /> */}
       <Route exact path="/resevations" element={<MyResevationsPage />} />
+      <Route exact path="/home" element={<Home />} />
+      <Route exact path="/add-trip" element={<AddTrip />} />
       <Route exact path="/" element={<Landing />} />
     </Routes>
   );
