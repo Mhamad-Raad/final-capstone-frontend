@@ -1,5 +1,5 @@
-// import { useParams } from 'react-router-dom';
-// import { useSelector } from 'react-redux';
+import { useParams } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 import { AiOutlineSetting } from 'react-icons/ai';
 import { BsArrowRightCircle } from 'react-icons/bs';
 import { IoChevronBackCircleOutline } from 'react-icons/io5';
@@ -8,11 +8,19 @@ import '../../assets/stylesheets/Details.css';
 // the commented code is for future use
 
 export default function Details() {
-  // const { id } = useParams();
+  const { id } = useParams();
+  console.log(id);
 
-  // const trips = useSelector((state) => state.trips.trips);
+  const trips = useSelector((state) => state.trips.trips);
 
-  // const trip = trips.find((trip) => trip.id === id);
+  console.log(trips);
+
+  const trip = trips.find((trip) => {
+    console.log(trip.id);
+    return trip.id === +id;
+  });
+
+  console.log(trip);
 
   const reserveHandler = () => {
     // route to reserve page
@@ -32,31 +40,30 @@ export default function Details() {
       </div>
 
       <div className="info column">
-        <h1 className="info-title">Details</h1>
-        <p className="info-subtitle">subtext</p>
+        <h1 className="info-title">{trip.destination_city}</h1>
         <div className="box row">
           <p>
-            price
+            Price
           </p>
           <p>
-            100$
+            {`${trip.price} $`}
           </p>
         </div>
 
         <div className="darkbox row">
           <p>
-            price
+            Ratings
           </p>
           <p>
-            100$
+            {`${trip.rating}/5`}
           </p>
         </div>
 
         <p className="description">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+          {trip.description}
         </p>
 
-        <button className="reserve-btn row" type="button" onClick={reserveHandler}>
+        <button className="home-reserve-btn row" type="button" onClick={reserveHandler}>
           <AiOutlineSetting />
           Reserve
           <BsArrowRightCircle />

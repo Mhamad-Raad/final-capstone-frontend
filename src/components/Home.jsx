@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { fetchTrips } from '../redux/tripSlice';
 
 const Home = () => {
@@ -19,9 +20,11 @@ const Home = () => {
     <div>
       {trips.length > 0 && trips.map((trip) => (
         <div key={trip.id}>
-          <h2>{trip.destination_city}</h2>
-          <p>{trip.description}</p>
-          <p>{trip.date}</p>
+          <Link to={`/home/${trip.id}`}>
+            <h2>{trip.destination_city}</h2>
+            <p>{trip.description}</p>
+            <p>{trip.date}</p>
+          </Link>
         </div>
       ))}
     </div>
