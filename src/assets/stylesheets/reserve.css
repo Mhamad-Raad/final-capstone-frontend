@@ -1,0 +1,9 @@
+.reserve-bg {
+  background: url('https://rare-gallery.com/uploads/posts/558972-sky-high-resolution.jpg') no-repeat center center fixed;
+  filter: blur(10px);
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  z-index: -1;
+}

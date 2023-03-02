@@ -67,6 +67,12 @@ button {
   flex-direction: row;
 }
 
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
 .footer {
   position: absolute;
   padding: 0 4.5rem 4.5rem 4.5rem;
