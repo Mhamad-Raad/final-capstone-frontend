@@ -1,0 +1,122 @@
+.add-trip-page {
+  padding: 20px;
+  width: 100%;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.trip-header {
+  font-size: 2.5rem;
+  font-weight: bolder;
+  margin-bottom: 20px;
+}
+
+.add-trip-form {
+  justify-content: center;
+  align-items: flex-start;
+  width: 75%;
+  gap: 10px;
+  position: relative;
+}
+
+.currencyinput {
+  padding: 2px 7px;
+}
+
+.currencyinput,
+.add-trip-form > input,
+.add-trip-form > textarea {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-weight: bolder;
+  font-size: 1.5rem;
+  background: var(--platinum);
+}
+
+.add-trip-form > input {
+  padding: 2px 7px;
+}
+
+.add-trip-form > textarea {
+  resize: none;
+  height: 250px;
+  padding: 2px 7px;
+}
+
+.add-trip-price {
+  width: 100%;
+  margin: 0;
+  display: inline-block;
+  background: var(--platinum);
+  padding: 0;
+}
+
+.rating-row {
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.rate-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+  margin-left: 2px;
+}
+
+.rates-trip {
+  top: 0 !important;
+  left: 0 !important;
+  background-color: transparent;
+  border: none;
+}
+
+.add-trip-form > button {
+  font-size: 2rem;
+  font-weight: bolder;
+  padding: 12.5px 25px;
+  border-radius: 4px;
+  background: var(--background);
+  color: var(--black-olive);
+  border: none;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+@media only screen and (max-width: 600px) {
+  .add-trip-page {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .add-trip-form {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .add-trip-form > button {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  .add-trip-form > input {
+    width: 100%;
+  }
+
+  .add-trip-form > textarea {
+    width: 100%;
+  }
+
+  .add-trip-price {
+    width: 100%;
+  }
+
+  .currencyinput {
+    width: 100%;
+  }
+}
