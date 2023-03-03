@@ -1,19 +1,35 @@
+import { useSelector, useDispatch } from 'react-redux';
+import { useEffect } from 'react';
+import { fetchTrips } from '../../redux/tripSlice';
 import './ReservationItem.css';
 
-export default function ReservationItem({ delay }) {
+export default function ReservationItem({ delay, reservation }) {
   const styles = {
     animationDuration: `${delay}s`,
   };
 
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchTrips());
+  }, [dispatch]);
+
+  const trips = useSelector((state) => state.trips.trips);
+
+  const trip = trips.find((trip) => {
+    console.log(trip.id);
+    return trip.id === reservation.trip_id;
+  });
+
   return (
     <li className="reservation-item row" style={styles}>
       <div className="column">
-        <h2 className="destination-city">Destination city</h2>
-        <h3 className="departure-city">Departure city</h3>
+        <h2 className="destination-city">{trip?.destination_city}</h2>
+        <h3 className="departure-city">{reservation.departure_city}</h3>
       </div>
       <div className="column">
-        <h2 className="reservation-price">Reservation price</h2>
-        <h3 className="reservation-date">Reservation date</h3>
+        <h2 className="reservation-price">{`${trip?.price}$`}</h2>
+        <h3 className="reservation-date">{reservation.date}</h3>
       </div>
     </li>
   );

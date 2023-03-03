@@ -68,9 +68,11 @@ export default function ReserveForm() {
     console.log(data);
   };
 
+  const destination = trip?.destination_city[0].toUpperCase() + trip?.destination_city.slice(1);
+
   return (
     <div className="reserve__container column">
-      {trip !== undefined ? <h1 className="reserve_title">{trip?.destination_city}</h1> : <h1 className="reserve_title">Reserve</h1>}
+      {trip !== undefined ? <h1 className="reserve_title">{destination}</h1> : <h1 className="reserve_title">Reserve</h1>}
       {trip !== undefined && (
         <p className="reserve_subtitle">
           {`${trip?.destination_city} - ${trip?.description}`}

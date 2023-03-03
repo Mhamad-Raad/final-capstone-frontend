@@ -51,6 +51,7 @@ h2,
 h3,
 p {
   margin: 0;
+  background-color: transparent;
 }
 
 button {
@@ -58,13 +59,16 @@ button {
 }
 
 .column {
-  display: flex;
   flex-direction: column;
 }
 
 .row {
-  display: flex;
   flex-direction: row;
+}
+
+.column,
+.row {
+  display: flex;
 }
 
 h1,
