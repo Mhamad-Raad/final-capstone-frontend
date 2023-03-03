@@ -19,9 +19,9 @@ const Home = () => {
     <div>
       {trips.length > 0 && trips.map((trip) => (
         <div key={trip.id}>
+          <img src={trip.image_url} alt={trip.destination_city} />
           <h2>{trip.destination_city}</h2>
-          <p>{trip.description}</p>
-          <p>{trip.date}</p>
+          <p>{trip.price}</p>
         </div>
       ))}
     </div>

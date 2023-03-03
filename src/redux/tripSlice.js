@@ -12,17 +12,28 @@ export const fetchTrips = createAsyncThunk('trips/fetchTrips', async () => {
   return response.data;
 });
 
-export const addTrip = createAsyncThunk('trips/addTrip', async (trip) => {
+export const addTrip = async (tripData) => {
   const token = localStorage.getItem('token');
+
+  const formData = new FormData();
+  formData.append('trip[price]', tripData.get('price'));
+  formData.append('trip[rating]', tripData.get('rating'));
+  formData.append('trip[destination_city]', tripData.get('destination_city'));
+  formData.append('trip[description]', tripData.get('description'));
+  formData.append('trip[user_id]', tripData.get('user_id'));
+
+  formData.append('image', tripData.get('image'));
+
   const config = {
     headers: {
-      'Content-Type': 'application/json',
+      'Content-Type': 'multipart/form-data',
       Authorization: `Bearer ${token}`,
     },
   };
-  const response = await axios.post('http://localhost:4000/api/v1/trips', trip, config);
+
+  const response = await axios.post('http://localhost:4000/api/v1/trips', formData, config);
   return response.data;
-});
+};
 
 const tripSlice = createSlice({
   name: 'trips',
@@ -46,6 +57,20 @@ const tripSlice = createSlice({
     },
 
     [fetchTrips.rejected]: (state, action) => {
+      state.status = 'failed';
+      state.error = action.error.message;
+    },
+
+    [addTrip.pending]: (state) => {
+      state.status = 'loading';
+    },
+
+    [addTrip.fulfilled]: (state, action) => {
+      state.status = 'succeeded';
+      state.trips.push(action.payload);
+    },
+
+    [addTrip.rejected]: (state, action) => {
       state.status = 'failed';
       state.error = action.error.message;
     },
