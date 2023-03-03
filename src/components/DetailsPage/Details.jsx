@@ -35,10 +35,6 @@ export default function Details() {
 
   console.log(trip);
 
-  const reserveHandler = () => {
-    // route to reserve page
-  };
-
   return (
     <div className="details row">
       <div className="bg_image">
@@ -76,11 +72,11 @@ export default function Details() {
           {trip?.description}
         </p>
 
-        <button className="home-reserve-btn row" type="button" onClick={reserveHandler}>
+        <Link className="home-reserve-btn row" to={`/home/${trip?.id}/reserve`}>
           <AiOutlineSetting />
           Reserve
           <BsArrowRightCircle />
-        </button>
+        </Link>
       </div>
     </div>
   );

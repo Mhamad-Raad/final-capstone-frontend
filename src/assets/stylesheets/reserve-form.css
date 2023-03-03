@@ -1,5 +1,4 @@
 .reserve__container {
-  background: rgba(255, 255, 255, 0.8);
   border-radius: 10px;
   padding: 20px;
   margin: 0 auto;
@@ -12,8 +11,59 @@
   gap: 15px;
 }
 
+label {
+  padding: 0;
+}
+
+label > input,
+.first-row > select {
+  background-color: transparent;
+  border: 1px solid var(--metalic-brown);
+}
+
+.first-row {
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.reserve_form > input,
+.reserve_form > select {
+  background-color: transparent;
+  border: 1px solid var(--metalic-brown);
+}
+
+.username {
+  background-color: transparent;
+  width: 50%;
+  height: 4rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--metalic-brown);
+  border: none;
+  box-shadow: none;
+  border-radius: 8px;
+}
+
 .reserve_title {
   font-size: 2.5rem;
+  font-weight: bolder;
+  color: var(--metalic-brown);
+  text-align: center;
+}
+
+.trip-input {
+  width: 50%;
+  height: 4rem;
+  padding: 0 0.7em;
+  border-radius: 8px;
+  font-weight: bold;
+  background: var(--platinum);
+  border: none;
+  color: var(--metalic-brown);
+}
+
+.reserve_subtitle {
+  font-size: 1.5rem;
   font-weight: bolder;
   color: var(--metalic-brown);
   text-align: center;
