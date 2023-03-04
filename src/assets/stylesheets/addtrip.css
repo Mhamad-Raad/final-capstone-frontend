@@ -11,6 +11,12 @@
   margin-bottom: 20px;
 }
 
+.image-title {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  margin-bottom: 10px;
+}
+
 .add-trip-form {
   justify-content: center;
   align-items: flex-start;
@@ -54,17 +60,33 @@
   padding: 0;
 }
 
-.rating-row {
+.rating-row,
+.image-row {
   justify-content: center;
   align-items: center;
   gap: 10px;
 }
 
-.rate-title {
+.image-row {
+  position: static;
+  background: transparent;
+}
+
+.image-row > input {
+  padding: 0;
+  height: auto;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+}
+
+.rate-title,
+.image-title {
   font-size: 1.5rem;
   font-weight: bold;
   margin: 0;
   margin-left: 2px;
+  color: black;
 }
 
 .rates-trip {

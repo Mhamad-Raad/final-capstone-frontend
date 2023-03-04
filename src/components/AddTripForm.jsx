@@ -50,7 +50,7 @@ const AddTripForm = () => {
         <span className="row rating-row">
           <span className="rate-title">Rate: </span>
           <Rating
-            defaultValue={3.5}
+            defaultValue={2.5}
             precision={0.5}
             size="large"
             className="rates-trip"
@@ -65,17 +65,17 @@ const AddTripForm = () => {
           placeholder="Destination City"
         />
 
-        <div>
-          <label htmlFor="image">
+        <span className="image-row row">
+          <span className="image-title">
             Image:
-            <input
-              type="file"
-              id="image"
-              accept=".jpg, .jpeg, .png"
-              onChange={(e) => setImage(e.target.files[0])}
-            />
-          </label>
-        </div>
+          </span>
+          <input
+            type="file"
+            id="image"
+            accept=".jpg, .jpeg, .png"
+            onChange={(e) => setImage(e.target.files[0])}
+          />
+        </span>
 
         <textarea
           value={description}
