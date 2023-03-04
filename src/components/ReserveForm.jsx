@@ -55,13 +55,17 @@ export default function ReserveForm({ trip, trips }) {
             required
           />
 
-          <select className="trip-input" ref={tripIdRef} required>
-            <option value="" selected>Select</option>
+          <select
+            className="trip-input"
+            ref={tripIdRef}
+            required
+            defaultValue={trip?.id === undefined ? '' : trip?.id}
+          >
+            <option value="">Select</option>
             {
               trips?.map((t) => (
                 <option
                   value={t?.id}
-                  selected={t?.id === trip?.id}
                   key={t?.id}
                 >
                   {t.destination_city}
@@ -72,8 +76,8 @@ export default function ReserveForm({ trip, trips }) {
             <option value="Erbil">Erbil</option>
           </select>
         </div>
-        <select className="departure-city-input" ref={departureCity} required>
-          <option value="" selected>Select Departure City</option>
+        <select className="departure-city-input" ref={departureCity} required defaultValue="">
+          <option value="">Select Departure City</option>
           <option value="Sulaimaniyah">Sulaimaniyah</option>
           <option value="Erbil">Erbil</option>
         </select>

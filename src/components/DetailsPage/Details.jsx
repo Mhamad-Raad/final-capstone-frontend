@@ -27,11 +27,19 @@ export default function Details() {
 
   const trip = trips.find((trip) => trip.id === +id);
 
+  let img = '';
+
+  if (trip !== undefined && trip?.image_url !== undefined) {
+    img = trip?.image_url;
+  } else {
+    img = 'https://rare-gallery.com/uploads/posts/558972-sky-high-resolution.jpg';
+  }
+
   return (
     <div className="details row">
       <div className="bg_image">
         <img
-          src="https://images.pexels.com/photos/235985/pexels-photo-235985.jpeg?cs=srgb&dl=pexels-pixabay-235985.jpg&fm=jpg"
+          src={`${img}`}
           alt="details"
           className="img"
         />

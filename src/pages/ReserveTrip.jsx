@@ -24,7 +24,7 @@ export default function ReserveTrip() {
 
   const trip = trips.find((trip) => trip.id === +id);
 
-  const style = trip !== undefined
+  const style = trip !== undefined && trip?.image_url !== undefined
     ? {
       backgroundImage: `url(${trip?.image_url})`,
     }
