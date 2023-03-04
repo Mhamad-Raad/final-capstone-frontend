@@ -1,8 +1,10 @@
 import { useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import '../assets/stylesheets/reserve-form.css';
 
 export default function ReserveForm({ trip, trips }) {
+  const navigate = useNavigate();
   const user = JSON.parse(localStorage.getItem('user'));
 
   const departureCity = useRef('');
@@ -32,7 +34,15 @@ export default function ReserveForm({ trip, trips }) {
         'Content-Type': 'application/json',
         Authorization: `Bearer ${token}`,
       },
-    }).then((res) => res.json());
+    })
+      .then((res) => res.json())
+      .then((data) => data)
+      .catch((er) => {
+        window.alert(er.message);
+        navigate('/home');
+      });
+
+    navigate('/reservations');
   };
 
   const destination = trip?.destination_city[0].toUpperCase() + trip?.destination_city.slice(1);
