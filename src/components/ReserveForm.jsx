@@ -1,34 +1,14 @@
-import { useRef, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
-import { useSelector, useDispatch } from 'react-redux';
-import { fetchTrips } from '../redux/tripSlice';
+import { useRef } from 'react';
 
 import '../assets/stylesheets/reserve-form.css';
 
-export default function ReserveForm() {
+export default function ReserveForm({ trip, trips }) {
   const user = JSON.parse(localStorage.getItem('user'));
 
   const departureCity = useRef('');
   const timeRef = useRef('');
   const dateRef = useRef('');
   const tripIdRef = useRef('');
-
-  const { id } = useParams();
-
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(fetchTrips());
-  }, [dispatch]);
-
-  const status = useSelector((state) => state.trips.status);
-  const trips = useSelector((state) => state.trips.trips);
-
-  if (status === 'loading') {
-    return <div>Loading...</div>;
-  }
-
-  const trip = trips.find((trip) => trip.id === +id);
 
   const reserveHandler = () => {
     if (tripIdRef.current.value === '' || departureCity.current.value === ''
@@ -75,7 +55,7 @@ export default function ReserveForm() {
             required
           />
 
-          <select className="trip-input" ref={tripIdRef}>
+          <select className="trip-input" ref={tripIdRef} required>
             <option value="" selected>Select</option>
             {
               trips?.map((t) => (
@@ -92,7 +72,7 @@ export default function ReserveForm() {
             <option value="Erbil">Erbil</option>
           </select>
         </div>
-        <select className="departure-city-input" ref={departureCity}>
+        <select className="departure-city-input" ref={departureCity} required>
           <option value="" selected>Select Departure City</option>
           <option value="Sulaimaniyah">Sulaimaniyah</option>
           <option value="Erbil">Erbil</option>
