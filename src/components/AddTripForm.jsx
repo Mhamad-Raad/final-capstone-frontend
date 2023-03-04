@@ -9,24 +9,26 @@ const AddTripForm = () => {
   const [price, setPrice] = useState('');
   const [rating, setRating] = useState();
   const [destinationCity, setDestinationCity] = useState('');
+  const [image, setImage] = useState(null);
   const [description, setDescription] = useState('');
   const dispatch = useDispatch();
   const user = JSON.parse(localStorage.getItem('user')) || {};
-  const userId = user.id;
+  const userId = parseInt(user.id, 10);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const tripData = {
-      price,
-      rating,
-      destination_city: destinationCity,
-      description,
-      user_id: userId,
-    };
-    dispatch(addTrip(tripData));
+    const formData = new FormData();
+    formData.append('price', price);
+    formData.append('rating', rating);
+    formData.append('destination_city', destinationCity);
+    formData.append('description', description);
+    formData.append('user_id', userId);
+    formData.append('image', image);
+    dispatch(addTrip(formData));
     setPrice('');
     setRating('');
     setDestinationCity('');
+    setImage(null);
     setDescription('');
   };
 
@@ -62,6 +64,18 @@ const AddTripForm = () => {
           onChange={(e) => setDestinationCity(e.target.value)}
           placeholder="Destination City"
         />
+
+        <div>
+          <label htmlFor="image">
+            Image:
+            <input
+              type="file"
+              id="image"
+              accept=".jpg, .jpeg, .png"
+              onChange={(e) => setImage(e.target.files[0])}
+            />
+          </label>
+        </div>
 
         <textarea
           value={description}

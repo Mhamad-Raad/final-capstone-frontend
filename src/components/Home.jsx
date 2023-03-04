@@ -18,15 +18,16 @@ const Home = () => {
 
   return (
     <div>
-      {trips.length > 0 && trips.map((trip) => (
-        <div key={trip.id}>
-          <Link to={`/home/${trip.id}`}>
-            <h2>{trip.destination_city}</h2>
-            <p>{trip.description}</p>
-            <p>{trip.date}</p>
-          </Link>
-        </div>
-      ))}
+      {trips.length > 0
+        && trips.map((trip) => (
+          <div key={trip.id}>
+            <Link to={`/home/${trip.id}`}>
+              <img src={trip.image_url} alt={trip.destination_city} />
+              <h2>{trip.destination_city}</h2>
+              <p>{trip.price}</p>
+            </Link>
+          </div>
+        ))}
     </div>
   );
 };
