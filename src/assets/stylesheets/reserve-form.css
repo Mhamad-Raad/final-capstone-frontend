@@ -39,9 +39,9 @@ label > input,
   font-weight: bold;
   text-decoration: none;
   color: var(--metalic-brown);
-  border: none;
   box-shadow: none;
   border-radius: 8px;
+  border: 1px solid var(--metalic-brown);
 }
 
 .reserve_title {

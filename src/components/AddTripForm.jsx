@@ -43,6 +43,7 @@ const AddTripForm = () => {
             value={price}
             onChange={(e) => setPrice(e.target.value)}
             placeholder="Price"
+            required
           />
           $
         </span>
@@ -63,6 +64,7 @@ const AddTripForm = () => {
           value={destinationCity}
           onChange={(e) => setDestinationCity(e.target.value)}
           placeholder="Destination City"
+          required
         />
 
         <span className="image-row row">

@@ -10,7 +10,7 @@ export default function MyReservations() {
 
   useEffect(() => {
     dispatch(getAllReversedTrips());
-  }, []);
+  }, [dispatch]);
 
   return (
     <ul className="my-reservations column">

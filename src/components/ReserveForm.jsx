@@ -14,7 +14,6 @@ export default function ReserveForm() {
   const tripIdRef = useRef('');
 
   const { id } = useParams();
-  console.log(id);
 
   const dispatch = useDispatch();
 
@@ -29,12 +28,7 @@ export default function ReserveForm() {
     return <div>Loading...</div>;
   }
 
-  const trip = trips.find((trip) => {
-    console.log(trip.id);
-    return trip.id === +id;
-  });
-
-  console.log(trip);
+  const trip = trips.find((trip) => trip.id === +id);
 
   const reserveHandler = () => {
     if (tripIdRef.current.value === '' || departureCity.current.value === ''
@@ -42,16 +36,10 @@ export default function ReserveForm() {
       window.alert('Please fill all the fields');
       return;
     }
-    console.log('tripIdRef.current.value', tripIdRef.current.value);
-    console.log('departureCity.current.value', departureCity.current.value);
-    console.log('timeRef.current.value', timeRef.current.value);
-    console.log('dateRef.current.value', dateRef.current.value);
-    console.log('user.id', user.id);
 
     const token = localStorage.getItem('token');
-    console.log(token);
 
-    const data = fetch('http://localhost:4000/api/v1/reservations', {
+    fetch('http://localhost:4000/api/v1/reservations', {
       method: 'POST',
       body: JSON.stringify({
         user_id: user.id,
@@ -65,7 +53,6 @@ export default function ReserveForm() {
         Authorization: `Bearer ${token}`,
       },
     }).then((res) => res.json());
-    console.log(data);
   };
 
   const destination = trip?.destination_city[0].toUpperCase() + trip?.destination_city.slice(1);
@@ -80,9 +67,13 @@ export default function ReserveForm() {
       )}
       <form className="reserve_form column">
         <div className="first-row row">
-          <label htmlFor="username" className="username">
-            <input type="username" name="username" required="required" defaultValue={user.name} />
-          </label>
+          <input
+            className="username"
+            type="username"
+            name="username"
+            defaultValue={user.name}
+            required
+          />
 
           <select className="trip-input" ref={tripIdRef}>
             <option value="" selected>Select</option>
@@ -106,8 +97,8 @@ export default function ReserveForm() {
           <option value="Sulaimaniyah">Sulaimaniyah</option>
           <option value="Erbil">Erbil</option>
         </select>
-        <input type="time" ref={timeRef} />
-        <input type="date" ref={dateRef} />
+        <input type="time" ref={timeRef} required />
+        <input type="date" ref={dateRef} required />
         <button type="button" onClick={reserveHandler} className="reserve-btn">
           Reserve
         </button>

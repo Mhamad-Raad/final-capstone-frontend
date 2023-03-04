@@ -11,7 +11,6 @@ import '../../assets/stylesheets/Details.css';
 
 export default function Details() {
   const { id } = useParams();
-  console.log(id);
 
   const dispatch = useDispatch();
 
@@ -26,14 +25,7 @@ export default function Details() {
     return <div>Loading...</div>;
   }
 
-  console.log(trips);
-
-  const trip = trips.find((trip) => {
-    console.log(trip.id);
-    return trip.id === +id;
-  });
-
-  console.log(trip);
+  const trip = trips.find((trip) => trip.id === +id);
 
   return (
     <div className="details row">

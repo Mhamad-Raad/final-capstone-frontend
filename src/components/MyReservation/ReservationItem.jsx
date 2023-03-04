@@ -16,10 +16,7 @@ export default function ReservationItem({ delay, reservation }) {
 
   const trips = useSelector((state) => state.trips.trips);
 
-  const trip = trips.find((trip) => {
-    console.log(trip.id);
-    return trip.id === reservation.trip_id;
-  });
+  const trip = trips.find((trip) => trip.id === reservation.trip_id);
 
   return (
     <li className="reservation-item row" style={styles}>
