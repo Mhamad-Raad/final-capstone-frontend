@@ -10,6 +10,7 @@ import Home from './components/Home';
 import AddTrip from './components/AddTripForm';
 import { setToken } from './redux/reducers/registrationSlice';
 import Landing from './pages/Landing';
+import DeleteTrip from './pages/DeleteTrip';
 
 const App = () => {
   const registration = useSelector((store) => store.registration);
@@ -37,6 +38,7 @@ const App = () => {
       <Route exact path="/home" element={<Home />} />
       <Route exact path="/add-trip" element={<AddTrip />} />
       <Route exact path="/" element={<Landing />} />
+      <Route exact path="/delete-trip" element={<DeleteTrip />} />
     </Routes>
   );
 };
