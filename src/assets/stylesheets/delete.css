@@ -1,0 +1,168 @@
+.delete-page {
+  background: #e6f0d0;
+  height: 100vh;
+}
+
+.delete-page h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  text-transform: capitalize;
+  color: var(--black-olive);
+  letter-spacing: 1px;
+}
+
+.delete-page .message {
+  text-align: center;
+  font-style: italic;
+  font-size: 1.2rem;
+  color: #768886;
+  margin-bottom: 2rem;
+  letter-spacing: 0.5px;
+}
+
+.content {
+  height: 100%;
+  padding: 2rem;
+  background: var(--white);
+}
+
+.all-trips {
+  width: 80vw;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 8px;
+  margin: 0 auto;
+  flex-direction: column;
+}
+
+.single-trip {
+  gap: 3rem;
+  width: 100%;
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+  flex-basis: calc(50% - 10px);
+  box-shadow: 1px 3px 2px 0 #3e3a3a40, -2px -2px 8px #a89e9e4d;
+  background: linear-gradient(45deg, #63616138, #ffffff40);
+}
+
+.trip-content {
+  gap: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.trip-content h2 {
+  text-transform: uppercase;
+  font-size: 1.7rem;
+  color: #606e6d;
+}
+
+.delete-page img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 5px 7px -4px #483f3f;
+}
+
+.trip-content p {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--dark-lemon-lime);
+  padding-bottom: 1rem;
+}
+
+.trip-content button {
+  display: flex;
+  gap: 0.5rem;
+  border: none;
+  align-items: center;
+  align-self: baseline;
+  margin-top: 1rem;
+  padding: 0.56em 1.6rem;
+  background: #c40707;
+  border-radius: 6px;
+  color: var(--white);
+  font-weight: 600;
+  font-size: 1.3rem;
+  letter-spacing: 1.5px;
+  justify-content: center;
+  box-shadow: 0 5px 7px -4px #483f3f;
+}
+
+.trip-content button:hover {
+  box-shadow: 2px 2px 3px 1px #0e0e0e9e;
+  cursor: pointer;
+}
+
+.success {
+  color: var(--dark-lemon-lime);
+}
+
+@media screen and (min-width: 768px) {
+  .all-trips {
+    width: 75vw;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .single-trip {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+  }
+
+  .trip-content button {
+    margin-top: 0;
+  }
+
+  .trip-content p {
+    padding-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 1150px) {
+  .all-trips {
+    width: 70vw;
+    flex-direction: row;
+  }
+
+  .delete-page h1 {
+    font-size: 3rem;
+  }
+
+  .delete-page .message {
+    font-size: 1.2rem;
+  }
+
+  .delete-page img {
+    width: 110px;
+    height: 110px;
+  }
+
+  .trip-content {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .trip-content h2 {
+    flex: 1;
+  }
+
+  .trip-content p {
+    flex: 0.7;
+  }
+
+  .trip-content button {
+    flex: none;
+  }
+
+  .single-trip {
+    gap: 2rem;
+  }
+}

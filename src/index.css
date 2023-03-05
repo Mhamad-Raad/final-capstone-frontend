@@ -14,7 +14,7 @@
   --dark-vanilla: #c3cc9b;
   --crystal-blue: #62aea3;
   --sea-blue: #69c;
-  --dark-lemon-lime: #94b912;
+  --dark-lemon-lime: #8cb302;
   --spanish-yellow: #f7b217;
   --metalic-brown: #ad4708;
   --metalic-orange: #d46d0d;
@@ -56,25 +56,51 @@ a {
   flex-direction: row;
 }
 
-.footer {
-  position: absolute;
-  padding: 0 4.5rem 4.5rem 4.5rem;
+/* ----------Message---------- */
+
+.msg {
+  text-align: center;
   font-style: italic;
-  bottom: 0;
-  color: var(--metalic-brown);
   font-size: 1.2rem;
+  letter-spacing: 1px;
+  color: #768886;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+}
+
+.success-msg {
+  color: var(--dark-lemon-lime);
+}
+
+.error-msg {
+  color: var(--red);
+}
+
+.loading-msg {
+  color: var(--sea-blue);
 }
 
 .error-handler {
   display: flex;
   flex-direction: column;
-  padding-top: 2rem;
+  padding-bottom: 2rem;
   font-style: italic;
-  color: var(--red);
 }
 
-.error-msg {
+/* ----------Footer---------- */
+
+.footer {
+  position: absolute;
+  padding: 0 3.5rem 3.5rem 0.5rem;
+  font-style: italic;
+  bottom: 0;
+  color: var(--metalic-brown);
   font-size: 1.2rem;
-  letter-spacing: 1px;
-  filter: drop-shadow(0 1px 0 var(--black-olive));
+  font-weight: bold;
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    padding: 0 4.5rem 4.5rem 4.5rem;
+  }
 }
