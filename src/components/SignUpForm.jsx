@@ -92,7 +92,7 @@ export default function SignUpForm() {
         <label htmlFor="password">
           <input type={passwordType} name="password" required="required" onChange={handlePasswordChange} value={passwordInput} />
           <span>Password</span>
-          <button type="button" className="btn" onClick={togglePassword}>
+          <button type="button" className="eye-btn" onClick={togglePassword}>
             { passwordType === 'password' ? <AiFillEyeInvisible /> : <AiFillEye /> }
           </button>
         </label>
@@ -101,7 +101,7 @@ export default function SignUpForm() {
         <label htmlFor="password">
           <input type={confirmPasswordType} name="password" required="required" onChange={handleConfirmPasswordChange} value={confirmPasswordInput} />
           <span>Confirm Password</span>
-          <button type="button" className="btn" onClick={toggleConfirmPassword}>
+          <button type="button" className="eye-btn" onClick={toggleConfirmPassword}>
             { confirmPasswordType === 'password' ? <AiFillEyeInvisible /> : <AiFillEye /> }
           </button>
         </label>
