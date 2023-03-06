@@ -18,6 +18,10 @@
   align-items: center;
 }
 
+img {
+  border-radius: 100%;
+}
+
 .trip-card img {
   width: 80%;
   object-fit: cover;
@@ -65,8 +69,4 @@
   grid-template-columns: 1fr 1fr 1fr;
   justify-content: center;
   gap: 5rem;
-}
-
-img {
-  border-radius: 100%;
 }

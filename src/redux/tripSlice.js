@@ -8,7 +8,7 @@ export const fetchTrips = createAsyncThunk('trips/fetchTrips', async () => {
       Authorization: `Bearer ${token}`,
     },
   };
-  const response = await axios.get('https://capstone-backend-gz9j.onrender.com/api/v1/trips', config);
+  const response = await axios.get('http://0.0.0.0:5000/api/v1/trips', config);
   return response.data;
 });
 
@@ -31,7 +31,7 @@ export const addTrip = async (tripData) => {
     },
   };
 
-  const response = await axios.post('https://capstone-backend-gz9j.onrender.com/api/v1/trips', formData, config);
+  const response = await axios.post('http://0.0.0.0:5000/api/v1/trips', formData, config);
   return response.data;
 };
 
