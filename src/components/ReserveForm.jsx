@@ -21,7 +21,7 @@ export default function ReserveForm({ trip, trips }) {
 
     const token = localStorage.getItem('token');
 
-    fetch('http://localhost:4000/api/v1/reservations', {
+    fetch('http://https://capstone-backend-gz9j.onrender.com/api/v1/reservations', {
       method: 'POST',
       body: JSON.stringify({
         user_id: user.id,

@@ -9,9 +9,9 @@ import AddTrip from './components/AddTripForm';
 import { setToken } from './redux/reducers/registrationSlice';
 import Landing from './pages/Landing';
 import RootLayout from './components/Root';
-// import DeleteTrip from './pages/DeleteTrip';
-// import DetailsPage from './pages/DetailsPage';
-// import MyResevationsPage from './pages/MyResevationsPage';
+import DeleteTrip from './pages/DeleteTrip';
+import DetailsPage from './pages/DetailsPage';
+import MyResevationsPage from './pages/MyResevationsPage';
 // import ReserveTrip from './pages/ReserveTrip';
 
 const App = () => {
@@ -40,7 +40,9 @@ const App = () => {
       <Route path="/" element={<RootLayout />}>
         <Route path="/home" element={<Home />} />
         <Route path="/add-trip" element={<AddTrip />} />
-        <Route path="/my-reservations" element={<h1>My Reservations</h1>} />
+        <Route path="/trips/:id" element={<DetailsPage />} />
+        <Route path="/delete-trip/:id" element={<DeleteTrip />} />
+        <Route path="/my-reservations" element={<MyResevationsPage />} />
       </Route>
     </Routes>
   );

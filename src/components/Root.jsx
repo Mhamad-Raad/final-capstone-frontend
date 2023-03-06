@@ -14,6 +14,12 @@ const RootLayout = () => (
         <li>
           <Link to="/my-reservations">My Reservations</Link>
         </li>
+        <li>
+          <Link to="/trips/:id">Details Page</Link>
+        </li>
+        <li>
+          <Link to="/delet-trip/:id">Delete a Trip</Link>
+        </li>
       </ul>
     </nav>
     <Outlet />

@@ -8,11 +8,11 @@ export const fetchTrips = createAsyncThunk('trips/fetchTrips', async () => {
       Authorization: `Bearer ${token}`,
     },
   };
-  const response = await axios.get('http://0.0.0.0:5000/api/v1/trips', config);
+  const response = await axios.get('https://capstone-backend-gz9j.onrender.com/api/v1/trips', config);
   return response.data;
 });
 
-export const addTrip = async (tripData) => {
+export const addTrip = createAsyncThunk('trips/addTrip', async (tripData) => {
   const token = localStorage.getItem('token');
 
   const formData = new FormData();
@@ -31,9 +31,9 @@ export const addTrip = async (tripData) => {
     },
   };
 
-  const response = await axios.post('http://0.0.0.0:5000/api/v1/trips', formData, config);
+  const response = await axios.post('https://capstone-backend-gz9j.onrender.com/api/v1/trips', formData, config);
   return response.data;
-};
+});
 
 export const deleteTrip = createAsyncThunk('trips/deleteTrip', async (tripId) => {
   const token = localStorage.getItem('token');
@@ -44,7 +44,7 @@ export const deleteTrip = createAsyncThunk('trips/deleteTrip', async (tripId) =>
     },
     crossdomain: true,
   };
-  await axios.delete(`http://localhost:4000/api/v1/trips/${tripId}`, config);
+  await axios.delete(`https://capstone-backend-gz9j.onrender.com/v1/trips/${tripId}`, config);
   return {
     id: tripId,
   };
