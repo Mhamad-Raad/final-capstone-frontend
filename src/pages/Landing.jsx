@@ -26,10 +26,10 @@ export default function Landing() {
           </div>
           <div className="list_btn">
             <button type="button" className="sign_up_btn">
-              <Link to="/Sign-up"><span>Sign Up</span></Link>
+              <Link to="/sign-up"><span>Sign Up</span></Link>
             </button>
             <button type="button" className="sign_in_btn">
-              <Link to="/Sign-in"><span>Sign In</span></Link>
+              <Link to="/sign-in"><span>Sign In</span></Link>
             </button>
           </div>
         </div>
