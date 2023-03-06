@@ -8,7 +8,7 @@ export const fetchSignIn = createAsyncThunk(
     },
     { fulfillWithValue, rejectWithValue },
   ) => {
-    const signInResponse = await fetch('http://localhost:4000/api/v1/auth/log_in', {
+    const signInResponse = await fetch('https://capstone-backend-gz9j.onrender.com/api/v1/auth/log_in', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

@@ -1,7 +1,5 @@
 import './App.css';
-import {
-  Route, useNavigate, Routes, useLocation,
-} from 'react-router-dom';
+import { Route, useNavigate, Routes } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import Signup from './pages/Signup';
@@ -10,33 +8,36 @@ import Home from './components/Home';
 import AddTrip from './components/AddTripForm';
 import { setToken } from './redux/reducers/registrationSlice';
 import Landing from './pages/Landing';
+import RootLayout from './components/Root';
 
 const App = () => {
   const registration = useSelector((store) => store.registration);
   const navigate = useNavigate();
-  const location = useLocation();
 
   useEffect(() => {
-    const token = (localStorage.getItem('token') !== null);
-    const user = (localStorage.getItem('user') !== null);
+    const token = localStorage.getItem('token');
+    const user = localStorage.getItem('user');
 
     if (token && user) {
       setToken({
         token,
         user,
       });
-    } else if (location.pathname !== '/sign-up') {
+    } else if (window.location.pathname !== '/sign-up') {
       navigate('/sign-in');
     }
-  }, [registration]);
+  }, [registration, navigate]);
 
   return (
     <Routes>
-      <Route exact path="/sign-up" element={<Signup />} />
-      <Route exact path="/sign-in" element={<SignIn />} />
-      <Route exact path="/home" element={<Home />} />
-      <Route exact path="/add-trip" element={<AddTrip />} />
-      <Route exact path="/" element={<Landing />} />
+      <Route path="/" element={<Landing />} />
+      <Route path="/sign-up" element={<Signup />} />
+      <Route path="/sign-in" element={<SignIn />} />
+      <Route path="/" element={<RootLayout />}>
+        <Route path="/home" element={<Home />} />
+        <Route path="/add-trip" element={<AddTrip />} />
+        <Route path="/my-reservations" element={<h1>My Reservations</h1>} />
+      </Route>
     </Routes>
   );
 };
