@@ -10,6 +10,7 @@ import Home from './components/Home';
 import AddTrip from './components/AddTripForm';
 import { setToken } from './redux/reducers/registrationSlice';
 import Landing from './pages/Landing';
+import DeleteTrip from './pages/DeleteTrip';
 import DetailsPage from './pages/DetailsPage';
 import MyResevationsPage from './pages/MyResevationsPage';
 import ReserveTrip from './pages/ReserveTrip';
@@ -44,6 +45,7 @@ const App = () => {
       <Route exact path="/home/:id" element={<DetailsPage />} />
       <Route exact path="/add-trip" element={<AddTrip />} />
       <Route exact path="/" element={<Landing />} />
+      <Route exact path="/delete-trip" element={<DeleteTrip />} />
     </Routes>
   );
 };
