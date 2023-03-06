@@ -15,24 +15,39 @@ import DetailsPage from './pages/DetailsPage';
 import MyResevationsPage from './pages/MyResevationsPage';
 import ReserveTrip from './pages/ReserveTrip';
 
+const unProtectedRoutes = [
+  '/sign-in',
+  '/sign-up',
+  '/',
+];
+
 const App = () => {
   const registration = useSelector((store) => store.registration);
   const navigate = useNavigate();
   const location = useLocation();
 
   useEffect(() => {
-    const token = (localStorage.getItem('token') !== null);
-    const user = (localStorage.getItem('user') !== null);
+    if (!registration.token || !registration.user) {
+      const token = (localStorage.getItem('token') !== null);
+      const user = (localStorage.getItem('user') !== null);
 
-    if (token && user) {
-      setToken({
-        token,
-        user,
-      });
-    } else if (location.pathname !== '/sign-up') {
-      navigate('/sign-in');
+      if (token && user) {
+        dispatch(
+          setToken({
+            token,
+            user,
+          }),
+        );
+        if (unProtectedRoutes.includes(location.pathname)) {
+          navigate('/home');
+        }
+      } else if (location.pathname !== '/sign-up' && location.pathname !== '/') {
+        navigate('/sign-in');
+      }
+    } else if (unProtectedRoutes.includes(location.pathname)) {
+      navigate('/home');
     }
-  }, [registration]);
+  }, []);
 
   return (
     <Routes>
