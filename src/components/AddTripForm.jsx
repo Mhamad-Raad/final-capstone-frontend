@@ -1,10 +1,13 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { Rating } from '@mui/material';
 import { addTrip } from '../redux/tripSlice';
+
+import '../assets/stylesheets/addtrip.css';
 
 const AddTripForm = () => {
   const [price, setPrice] = useState('');
-  const [rating, setRating] = useState('');
+  const [rating, setRating] = useState();
   const [destinationCity, setDestinationCity] = useState('');
   const [image, setImage] = useState(null);
   const [description, setDescription] = useState('');
@@ -30,63 +33,61 @@ const AddTripForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
-        <label htmlFor="price">
-          Price:
+    <div className="add-trip-page column">
+      <h2 className="trip-header">Add Trip</h2>
+      <form onSubmit={handleSubmit} className="add-trip-form column">
+        <span className="currencyinput row">
           <input
             type="number"
-            id="price"
+            className="add-trip-price"
             value={price}
             onChange={(e) => setPrice(e.target.value)}
+            placeholder="Price"
+            required
           />
-        </label>
-      </div>
-      <div>
-        <label htmlFor="rating">
-          Rating:
-          <input
-            type="number"
-            id="rating"
-            value={rating}
+          $
+        </span>
+
+        <span className="row rating-row">
+          <span className="rate-title">Rate: </span>
+          <Rating
+            defaultValue={2.5}
+            precision={0.5}
+            size="large"
+            className="rates-trip"
             onChange={(e) => setRating(e.target.value)}
           />
-        </label>
-      </div>
-      <div>
-        <label htmlFor="destinationCity">
-          Destination City:
-          <input
-            type="text"
-            id="destinationCity"
-            value={destinationCity}
-            onChange={(e) => setDestinationCity(e.target.value)}
-          />
-        </label>
-      </div>
-      <div>
-        <label htmlFor="image">
-          Image:
+        </span>
+
+        <input
+          type="text"
+          value={destinationCity}
+          onChange={(e) => setDestinationCity(e.target.value)}
+          placeholder="Destination City"
+          required
+        />
+
+        <span className="image-row row">
+          <span className="image-title">
+            Image:
+          </span>
           <input
             type="file"
             id="image"
             accept=".jpg, .jpeg, .png"
             onChange={(e) => setImage(e.target.files[0])}
           />
-        </label>
-      </div>
-      <div>
-        <label htmlFor="description">
-          Description:
-          <textarea
-            id="description"
-            value={description}
-            onChange={(e) => setDescription(e.target.value)}
-          />
-        </label>
-      </div>
-      <button type="submit">Add Trip</button>
-    </form>
+        </span>
+
+        <textarea
+          value={description}
+          onChange={(e) => setDescription(e.target.value)}
+          placeholder="Description"
+        />
+
+        <button type="submit">Add Trip</button>
+      </form>
+    </div>
   );
 };
 

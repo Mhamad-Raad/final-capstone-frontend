@@ -35,6 +35,21 @@ export const addTrip = async (tripData) => {
   return response.data;
 };
 
+export const deleteTrip = createAsyncThunk('trips/deleteTrip', async (tripId) => {
+  const token = localStorage.getItem('token');
+  const config = {
+    method: 'DELETE',
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+    crossdomain: true,
+  };
+  await axios.delete(`http://localhost:4000/api/v1/trips/${tripId}`, config);
+  return {
+    id: tripId,
+  };
+});
+
 const tripSlice = createSlice({
   name: 'trips',
   initialState: {
@@ -71,6 +86,20 @@ const tripSlice = createSlice({
     },
 
     [addTrip.rejected]: (state, action) => {
+      state.status = 'failed';
+      state.error = action.error.message;
+    },
+
+    [deleteTrip.pending]: (state) => {
+      state.status = 'loading';
+    },
+
+    [deleteTrip.fulfilled]: (state, action) => {
+      state.status = 'succeeded';
+      state.trips = state.trips.filter((trip) => trip.id !== action.payload.id);
+    },
+
+    [deleteTrip.rejected]: (state, action) => {
       state.status = 'failed';
       state.error = action.error.message;
     },

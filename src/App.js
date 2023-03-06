@@ -9,6 +9,10 @@ import AddTrip from './components/AddTripForm';
 import { setToken } from './redux/reducers/registrationSlice';
 import Landing from './pages/Landing';
 import RootLayout from './components/Root';
+// import DeleteTrip from './pages/DeleteTrip';
+// import DetailsPage from './pages/DetailsPage';
+// import MyResevationsPage from './pages/MyResevationsPage';
+// import ReserveTrip from './pages/ReserveTrip';
 
 const App = () => {
   const registration = useSelector((store) => store.registration);

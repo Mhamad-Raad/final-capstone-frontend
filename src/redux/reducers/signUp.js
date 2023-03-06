@@ -8,20 +8,23 @@ export const fetchSignUp = createAsyncThunk(
     },
     { fulfillWithValue, rejectWithValue },
   ) => {
-    const signUpResponse = await fetch('https://capstone-backend-gz9j.onrender.com/api/v1/auth/sign_up', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        user: {
-          name,
-          email,
-          password,
-          confirmPassword,
+    const signUpResponse = await fetch(
+      'https://capstone-backend-gz9j.onrender.com/api/v1/auth/sign_up',
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
         },
-      }),
-    });
+        body: JSON.stringify({
+          user: {
+            name,
+            email,
+            password,
+            confirmPassword,
+          },
+        }),
+      },
+    );
     const data = await signUpResponse.json();
     if (signUpResponse.status === 200) {
       navigate('/trips');
@@ -64,7 +67,11 @@ export const signUpThunkReducers = (builder) => {
         };
         return newState;
       }
-      const newState = { ...state, error: 'Error 404. Failed to fetch', loading: false };
+      const newState = {
+        ...state,
+        error: 'Error 404. Failed to fetch',
+        loading: false,
+      };
       return newState;
     });
 };

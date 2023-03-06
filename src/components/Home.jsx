@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { fetchTrips } from '../redux/tripSlice';
 import '../assets/stylesheets/home.css';
 
@@ -31,13 +32,13 @@ const Home = () => {
     <div className="trip-cards-container">
       <div className="trip-cards-wrapper">
         {trips.slice(startIndex, endIndex + 1).map((trip) => (
-          <div key={trip.id} className="trip-card">
+          <Link to={`/home/${trip.id}`} key={trip.id} className="trip-card">
             <img src={trip.image_url} alt={trip.destination_city} />
             <div className="trip-info">
               <h2>{trip.destination_city}</h2>
               <p>{trip.price}</p>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
 
