@@ -10,7 +10,7 @@ export default function Error() {
         <span className="error-msg">{ErrorHandler.msg}</span>
         {' '}
         <span className="error-msg">{ErrorHandler.value}</span>
-        <p className="error-msg">{ErrorHandler.details.join('')}</p>
+        <p className="error-msg">{ErrorHandler?.details?.join('')}</p>
       </div>
     </div>
   );
