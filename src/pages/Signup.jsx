@@ -1,26 +1,42 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 import SignUpForm from '../components/SignUpForm';
 import Error from '../components/Error';
-import '../assets/stylesheets/registration.css';
-import img from '../assets/images/bg-2.jpg';
+import { setError } from '../redux/reducers/registrationSlice';
+import '../assets/stylesheets/session.css';
 
-const SignUp = () => (
-  <section className="session-page">
-    <div className="img-div">
-      {' '}
-      <img src={img} alt="" className="image" />
-    </div>
-    <div className="form-container">
-      <h1>Sign Up</h1>
-      <Error />
-      <SignUpForm />
-      <p>
-        Already have an account?
-        <Link to="/Sign-in" className="link"> Sign In</Link>
-      </p>
-    </div>
-  </section>
-);
+const SignUp = () => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(
+      setError({
+        msg: ' ',
+        value: ' ',
+        details: [],
+      }),
+    );
+  }, []);
+
+  return (
+    <section className="session-page signup">
+      <div className="overlay">
+        <div className="form-container">
+          <div className="text-column">
+            <h1>Create an account now!</h1>
+            <h2>Your next adventure starts here!</h2>
+            <Error />
+            <SignUpForm />
+            <p>
+              Already have an account?
+              <Link to="/sign-in" className="link"> Sign In</Link>
+            </p>
+          </div>
+          <div className="image" />
+        </div>
+      </div>
+    </section>
+  );
+};
 
 export default SignUp;

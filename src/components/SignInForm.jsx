@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import { setError } from '../redux/reducers/registrationSlice';
 import { fetchSignIn } from '../redux/reducers/signIn';
 
 export default function SignInForm() {
@@ -25,9 +26,19 @@ export default function SignInForm() {
 
   const onSubmit = (event) => {
     event.preventDefault();
-    dispatch(fetchSignIn({
-      email, password: passwordInput, navigate,
-    }));
+    if (email && passwordInput) {
+      dispatch(fetchSignIn({
+        email, password: passwordInput, navigate,
+      }));
+    } else {
+      dispatch(
+        setError({
+          msg: 'Cannot submit',
+          value: 'Please fill all fields',
+          details: [],
+        }),
+      );
+    }
   };
 
   const changeEmail = (event) => {
@@ -46,12 +57,12 @@ export default function SignInForm() {
         <label htmlFor="password">
           <input type={passwordType} required="required" onChange={handlePasswordChange} value={passwordInput} name="password" />
           <span>Password</span>
-          <button type="button" className="btn btn-outline-primary" onClick={togglePassword}>
+          <button type="button" className="eye-btn" onClick={togglePassword}>
             { passwordType === 'password' ? <AiFillEyeInvisible /> : <AiFillEye /> }
           </button>
         </label>
       </div>
-      <button type="submit" className="submit-btn" onClick={onSubmit}>Log In</button>
+      <button type="submit" className="submit-btn" onClick={onSubmit}><span>Log In</span></button>
     </form>
   );
 }
