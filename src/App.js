@@ -8,7 +8,7 @@ import Signup from './pages/Signup';
 import SignIn from './pages/SignIn';
 import Home from './components/Home';
 import AddTrip from './components/AddTripForm';
-import { setToken } from './redux/reducers/registrationSlice';
+import { setToken } from './redux/reducers/sessionSlice';
 import Landing from './pages/Landing';
 import DeleteTrip from './pages/DeleteTrip';
 import DetailsPage from './pages/DetailsPage';
@@ -22,12 +22,12 @@ const unProtectedRoutes = [
 ];
 
 const App = () => {
-  const registration = useSelector((store) => store.registration);
+  const session = useSelector((store) => store.session);
   const navigate = useNavigate();
   const location = useLocation();
 
   useEffect(() => {
-    if (!registration.token || !registration.user) {
+    if (!session.token || !session.user) {
       const token = (localStorage.getItem('token') !== null);
       const user = (localStorage.getItem('user') !== null);
 

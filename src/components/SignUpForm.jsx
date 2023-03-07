@@ -3,7 +3,7 @@ import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { fetchSignUp } from '../redux/reducers/signUp';
-import { setError } from '../redux/reducers/registrationSlice';
+import { setError } from '../redux/reducers/sessionSlice';
 
 export default function SignUpForm() {
   const [passwordType, setPasswordType] = useState('password');

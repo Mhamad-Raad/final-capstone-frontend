@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import SignUpForm from '../components/SignUpForm';
 import Error from '../components/Error';
-import { setError } from '../redux/reducers/registrationSlice';
+import { setError } from '../redux/reducers/sessionSlice';
 import '../assets/stylesheets/session.css';
 
 const SignUp = () => {
