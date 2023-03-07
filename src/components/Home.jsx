@@ -56,7 +56,7 @@ const Home = () => {
 
       <div className="trip-cards-container row">
         {trips.slice(startIndex, endIndex + 1).map((trip) => (
-          <Link to={`/trips/${trip.id}`} key={trip.id} className="trip-card">
+          <Link to={`/home/${trip.id}`} key={trip.id} className="trip-card">
             <img src={trip.image_url} alt={trip.destination_city} className="home-img" />
             <div className="trip-info">
               <h2>{trip?.destination_city.toUpperCase()}</h2>
