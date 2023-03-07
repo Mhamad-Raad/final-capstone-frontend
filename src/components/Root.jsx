@@ -4,6 +4,7 @@ import '../assets/stylesheets/root.css';
 const RootLayout = () => (
   <div className="root-layout">
     <nav className="desktop-nav column">
+      <h1 className="desk-nav-logo">Travel App</h1>
       <ul className="column">
         <li>
           <NavLink to="home">Home</NavLink>
@@ -23,6 +24,16 @@ const RootLayout = () => (
           </NavLink>
         </li>
       </ul>
+      <div className="desk-copy-right column">
+        <p>
+          &copy; 2021 Travel App made by:
+        </p>
+        <div className="creator-names row">
+          <a href="https://www.linkedin.com/in/mhamad-raad">Mhamad Raad</a>
+          <a href="https://www.linkedin.com/in/shaker-abady">Shaker Abady</a>
+          <a href="https://www.linkedin.com/in/kanza-tahreem/">Kanza Tahreem</a>
+        </div>
+      </div>
     </nav>
     <Outlet />
   </div>
