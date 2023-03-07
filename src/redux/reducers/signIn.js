@@ -1,9 +1,9 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { useDispatch } from 'react-redux';
-import { getAllReversedTrips } from '../reserveSlice';
+// import { useDispatch } from 'react-redux';
+// import { getAllReversedTrips } from '../reserveSlice';
 
 export const fetchSignIn = createAsyncThunk(
-  'registration/signIn/fetch',
+  'session/signIn/fetch',
   async (
     {
       email, password, navigate,
@@ -27,7 +27,7 @@ export const fetchSignIn = createAsyncThunk(
     );
     const data = await signInResponse.json();
     if (signInResponse.status === 200) {
-      navigate('/trips');
+      navigate('/home');
       return fulfillWithValue(data);
     }
     return rejectWithValue({
@@ -44,7 +44,7 @@ export const signInReducer = (builder) => {
       return newState;
     })
     .addCase(fetchSignIn.fulfilled, (state, action) => {
-      const dispatch = useDispatch();
+      // const dispatch = useDispatch();
       localStorage.setItem('token', action.payload.token);
       localStorage.setItem('user', JSON.stringify(action.payload.user));
       const newState = {
@@ -54,7 +54,7 @@ export const signInReducer = (builder) => {
         loading: false,
       };
 
-      dispatch(getAllReversedTrips);
+      // dispatch(getAllReversedTrips);
 
       return newState;
     })
