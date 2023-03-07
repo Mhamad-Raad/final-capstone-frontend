@@ -32,7 +32,7 @@ const Home = () => {
     <div className="trip-cards-container">
       <div className="trip-cards-wrapper">
         {trips.slice(startIndex, endIndex + 1).map((trip) => (
-          <Link to={`/home/${trip.id}`} key={trip.id} className="trip-card">
+          <Link to={`/trips/${trip.id}`} key={trip.id} className="trip-card">
             <img src={trip.image_url} alt={trip.destination_city} />
             <div className="trip-info">
               <h2>{trip.destination_city}</h2>
