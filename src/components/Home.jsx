@@ -30,8 +30,13 @@ const Home = () => {
     }
   };
 
-  const headerStyle = {
+  const headerDotStyle = {
     marginTop: '25px',
+  };
+
+  const itemDotStyle = {
+    marginBottom: '10px',
+    fontSize: '12px',
   };
 
   return (
@@ -39,7 +44,9 @@ const Home = () => {
       <div className="home-page-header column">
         <h1 className="home-title">Explore the world</h1>
         <p className="home-subtitle">Find your next adventure</p>
-        <DotSeperator style={headerStyle} />
+        <DotSeperator style={headerDotStyle}>
+          ..........................
+        </DotSeperator>
       </div>
 
       <div className="trip-cards-container row">
@@ -48,6 +55,9 @@ const Home = () => {
             <img src={trip.image_url} alt={trip.destination_city} className="home-img" />
             <div className="trip-info">
               <h2>{trip.destination_city}</h2>
+              <DotSeperator style={itemDotStyle}>
+                ............
+              </DotSeperator>
               <p>{trip.price}</p>
             </div>
           </Link>
