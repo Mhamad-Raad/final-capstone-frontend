@@ -37,8 +37,8 @@ export default function ReserveTrip() {
     <>
       <div className="reserve-bg">
         <div className="reserve-img" style={style} />
+        <ReserveForm trip={trip} trips={trips} />
       </div>
-      <ReserveForm trip={trip} trips={trips} />
     </>
   );
 }

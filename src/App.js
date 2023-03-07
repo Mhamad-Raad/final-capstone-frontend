@@ -1,7 +1,5 @@
 import './App.css';
-import {
-  Route, useNavigate, Routes, useLocation,
-} from 'react-router-dom';
+import { Route, useNavigate, Routes } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import Signup from './pages/Signup';
@@ -10,6 +8,7 @@ import Home from './components/Home';
 import AddTrip from './components/AddTripForm';
 import { setToken } from './redux/reducers/sessionSlice';
 import Landing from './pages/Landing';
+import RootLayout from './components/Root';
 import DeleteTrip from './pages/DeleteTrip';
 import DetailsPage from './pages/DetailsPage';
 import MyResevationsPage from './pages/MyResevationsPage';
@@ -23,8 +22,9 @@ const unProtectedRoutes = [
 
 const App = () => {
   const session = useSelector((store) => store.session);
-  const navigate = useNavigate();
   const location = useLocation();
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (!session.token || !session.user) {
@@ -51,16 +51,17 @@ const App = () => {
 
   return (
     <Routes>
-      <Route exact path="/sign-up" element={<Signup />} />
-      <Route exact path="/sign-in" element={<SignIn />} />
-      <Route exact path="/home/:id/reserve" element={<ReserveTrip />} />
-      {/* <Route exact path="/trips" element={<Trips />} /> */}
-      <Route exact path="/reservations" element={<MyResevationsPage />} />
-      <Route exact path="/home" element={<Home />} />
-      <Route exact path="/home/:id" element={<DetailsPage />} />
-      <Route exact path="/add-trip" element={<AddTrip />} />
-      <Route exact path="/" element={<Landing />} />
-      <Route exact path="/delete-trip" element={<DeleteTrip />} />
+      <Route path="/" element={<Landing />} />
+      <Route path="/sign-up" element={<Signup />} />
+      <Route path="/sign-in" element={<SignIn />} />
+      <Route path="/" element={<RootLayout />}>
+        <Route path="/home" element={<Home />} />
+        <Route path="/add-trip" element={<AddTrip />} />
+        <Route path="/trips/:id" element={<DetailsPage />} />
+        <Route path="/delete-trip" element={<DeleteTrip />} />
+        <Route path="/home/:id/reserve" element={<ReserveTrip />} />
+        <Route path="/my-reservations" element={<MyResevationsPage />} />
+      </Route>
     </Routes>
   );
 };

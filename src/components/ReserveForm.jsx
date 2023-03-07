@@ -15,13 +15,13 @@ export default function ReserveForm({ trip, trips }) {
   const reserveHandler = () => {
     if (tripIdRef.current.value === '' || departureCity.current.value === ''
       || timeRef.current.value === '' || dateRef.current.value === '') {
-      window.alert('Please fill all the fields');
+      // window.alert('Please fill all the fields');
       return;
     }
 
     const token = localStorage.getItem('token');
 
-    fetch('http://localhost:4000/api/v1/reservations', {
+    fetch('http://https://capstone-backend-gz9j.onrender.com/api/v1/reservations', {
       method: 'POST',
       body: JSON.stringify({
         user_id: user.id,
@@ -37,8 +37,8 @@ export default function ReserveForm({ trip, trips }) {
     })
       .then((res) => res.json())
       .then((data) => data)
-      .catch((er) => {
-        window.alert(er.message);
+      .catch(() => {
+        // window.alert(er.message);
         navigate('/home');
       });
 
@@ -82,8 +82,6 @@ export default function ReserveForm({ trip, trips }) {
                 </option>
               ))
             }
-            <option value="Sulaimaniyah">Sulaimaniyah</option>
-            <option value="Erbil">Erbil</option>
           </select>
         </div>
         <select className="departure-city-input" ref={departureCity} required defaultValue="">

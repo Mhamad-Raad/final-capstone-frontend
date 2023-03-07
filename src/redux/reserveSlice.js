@@ -7,7 +7,7 @@ const defaultSlice = {
 export const getAllReversedTrips = createAsyncThunk(
   'user/myreservations',
   async () => {
-    const data = await fetch('http://localhost:4000/api/v1/reservations', {
+    const data = await fetch('https://capstone-backend-gz9j.onrender.com/api/v1/reservations', {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
