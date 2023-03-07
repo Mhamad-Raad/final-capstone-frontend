@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { fetchTrips } from '../redux/tripSlice';
+import { BsCaretLeft, BsCaretRight } from 'react-icons/bs';
 
+import { fetchTrips } from '../redux/tripSlice';
 import DotSeperator from './DotSeperator';
 import '../assets/stylesheets/home.css';
 
@@ -39,6 +40,13 @@ const Home = () => {
     fontSize: '12px',
   };
 
+  console.log(trips.length);
+  console.log(endIndex);
+
+  const arrowsEndStyle = {
+    backgroundColor: 'grey',
+  };
+
   return (
     <div className="column home-page">
       <div className="home-page-header column">
@@ -64,12 +72,22 @@ const Home = () => {
         ))}
 
       </div>
-      <button type="button" className="arrow-button left-arrow" onClick={handleClickLeft}>
-        <i className="fa fa-angle-left" />
+      <button
+        type="button"
+        className="arrow-button left-arrow"
+        onClick={handleClickLeft}
+        style={startIndex === 0 ? arrowsEndStyle : null}
+      >
+        <BsCaretLeft />
       </button>
 
-      <button type="button" className="arrow-button right-arrow" onClick={handleClickRight}>
-        <i className="fa fa-angle-right" />
+      <button
+        type="button"
+        className="arrow-button right-arrow"
+        onClick={handleClickRight}
+        style={endIndex - 1 === trips.length ? arrowsEndStyle : null}
+      >
+        <BsCaretRight />
       </button>
     </div>
   );
