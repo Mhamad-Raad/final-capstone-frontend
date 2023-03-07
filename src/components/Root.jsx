@@ -1,26 +1,26 @@
-import { Outlet, Link } from 'react-router-dom';
+import { Outlet, NavLink } from 'react-router-dom';
 import '../assets/stylesheets/root.css';
 
 const RootLayout = () => (
   <div className="root-layout">
-    <nav>
-      <ul>
+    <nav className="desktop-nav column">
+      <ul className="column">
         <li>
-          <Link to="/home">Home</Link>
+          <NavLink to="home">Home</NavLink>
         </li>
         <li>
-          <Link to="/add-trip">Add New Trip</Link>
+          <NavLink to="/add-trip">Add New Trip</NavLink>
         </li>
         <li>
-          <Link to="/my-reservations">My Reservations</Link>
+          <NavLink to="/my-reservations">My Reservations</NavLink>
         </li>
         <li>
-          <Link to="/delete-trip">Delete a Trip</Link>
+          <NavLink to="/delete-trip">Delete a Trip</NavLink>
         </li>
         <li>
-          <Link to="home/0/reserve">
+          <NavLink to="0/reserve">
             Reserve a Trip
-          </Link>
+          </NavLink>
         </li>
       </ul>
     </nav>

@@ -13,8 +13,8 @@ const initialState = {
   },
 };
 
-const registrationSlice = createSlice({
-  name: 'registration',
+const sessionSlice = createSlice({
+  name: 'session',
   initialState,
   reducers: {
     setToken: (state, action) => {
@@ -43,5 +43,5 @@ const registrationSlice = createSlice({
   },
 });
 
-export default registrationSlice.reducer;
-export const { setToken, setError } = registrationSlice.actions;
+export default sessionSlice.reducer;
+export const { setToken, setError } = sessionSlice.actions;

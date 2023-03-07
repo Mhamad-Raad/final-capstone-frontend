@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 
 export default function Error() {
-  const ErrorHandler = useSelector((state) => state.registration.error);
+  const ErrorHandler = useSelector((state) => state.session.error);
 
   return (
     <div className="error-handler">
@@ -10,7 +10,7 @@ export default function Error() {
         <span className="error-msg">{ErrorHandler.msg}</span>
         {' '}
         <span className="error-msg">{ErrorHandler.value}</span>
-        <p className="error-msg">{ErrorHandler.details.join('')}</p>
+        <p className="error-msg">{ErrorHandler?.details?.join('')}</p>
       </div>
     </div>
   );
