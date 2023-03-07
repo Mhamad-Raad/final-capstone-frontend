@@ -41,7 +41,7 @@ export default function Details() {
         <img
           src={`${img}`}
           alt="details"
-          className="img"
+          className="details-img"
         />
         <Link className="back_button" to="/home">
           <IoChevronBackCircleOutline />

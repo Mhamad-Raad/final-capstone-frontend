@@ -30,17 +30,15 @@ const Home = () => {
 
   return (
     <div className="trip-cards-container">
-      <div className="trip-cards-wrapper">
-        {trips.slice(startIndex, endIndex + 1).map((trip) => (
-          <Link to={`/trips/${trip.id}`} key={trip.id} className="trip-card">
-            <img src={trip.image_url} alt={trip.destination_city} />
-            <div className="trip-info">
-              <h2>{trip.destination_city}</h2>
-              <p>{trip.price}</p>
-            </div>
-          </Link>
-        ))}
-      </div>
+      {trips.slice(startIndex, endIndex + 1).map((trip) => (
+        <Link to={`/trips/${trip.id}`} key={trip.id} className="trip-card">
+          <img src={trip.image_url} alt={trip.destination_city} className="home-img" />
+          <div className="trip-info">
+            <h2>{trip.destination_city}</h2>
+            <p>{trip.price}</p>
+          </div>
+        </Link>
+      ))}
 
       <button type="button" className="arrow-button left-arrow" onClick={handleClickLeft}>
         <i className="fa fa-angle-left" />

@@ -5,10 +5,11 @@
   width: 100%;
 }
 
-nav {
+.root-layout > nav {
   background-color: #f1f1f1;
   padding: 20px;
-  width: 300px;
+  width: 40%;
+  max-width: 300px;
 }
 
 ul {
