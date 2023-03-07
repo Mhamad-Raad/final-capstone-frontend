@@ -40,9 +40,6 @@ const Home = () => {
     fontSize: '12px',
   };
 
-  console.log(trips.length);
-  console.log(endIndex);
-
   const arrowsEndStyle = {
     backgroundColor: 'grey',
   };
