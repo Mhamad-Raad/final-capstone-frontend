@@ -1,7 +1,7 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
 export const fetchSignUp = createAsyncThunk(
-  'registration/signUp/fetch',
+  'session/signUp/fetch',
   async (
     {
       name, email, password, confirmPassword, navigate,
@@ -27,7 +27,7 @@ export const fetchSignUp = createAsyncThunk(
     );
     const data = await signUpResponse.json();
     if (signUpResponse.status === 200) {
-      navigate('/trips');
+      navigate('/home');
       return fulfillWithValue(data);
     }
     return rejectWithValue({

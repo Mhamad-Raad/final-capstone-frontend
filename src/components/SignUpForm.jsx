@@ -3,7 +3,7 @@ import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { fetchSignUp } from '../redux/reducers/signUp';
-import { setError } from '../redux/reducers/registrationSlice';
+import { setError } from '../redux/reducers/sessionSlice';
 
 export default function SignUpForm() {
   const [passwordType, setPasswordType] = useState('password');
@@ -92,7 +92,7 @@ export default function SignUpForm() {
         <label htmlFor="password">
           <input type={passwordType} name="password" required="required" onChange={handlePasswordChange} value={passwordInput} />
           <span>Password</span>
-          <button type="button" className="btn" onClick={togglePassword}>
+          <button type="button" className="eye-btn" onClick={togglePassword}>
             { passwordType === 'password' ? <AiFillEyeInvisible /> : <AiFillEye /> }
           </button>
         </label>
@@ -101,7 +101,7 @@ export default function SignUpForm() {
         <label htmlFor="password">
           <input type={confirmPasswordType} name="password" required="required" onChange={handleConfirmPasswordChange} value={confirmPasswordInput} />
           <span>Confirm Password</span>
-          <button type="button" className="btn" onClick={toggleConfirmPassword}>
+          <button type="button" className="eye-btn" onClick={toggleConfirmPassword}>
             { confirmPasswordType === 'password' ? <AiFillEyeInvisible /> : <AiFillEye /> }
           </button>
         </label>
