@@ -82,8 +82,6 @@ export default function ReserveForm({ trip, trips }) {
                 </option>
               ))
             }
-            <option value="Sulaimaniyah">Sulaimaniyah</option>
-            <option value="Erbil">Erbil</option>
           </select>
         </div>
         <select className="departure-city-input" ref={departureCity} required defaultValue="">

@@ -17,6 +17,11 @@ const RootLayout = () => (
         <li>
           <Link to="/delet-trip/:id">Delete a Trip</Link>
         </li>
+        <li>
+          <Link to="home/0/reserve">
+            Reserve a Trip
+          </Link>
+        </li>
       </ul>
     </nav>
     <Outlet />

@@ -12,7 +12,7 @@ import RootLayout from './components/Root';
 import DeleteTrip from './pages/DeleteTrip';
 import DetailsPage from './pages/DetailsPage';
 import MyResevationsPage from './pages/MyResevationsPage';
-// import ReserveTrip from './pages/ReserveTrip';
+import ReserveTrip from './pages/ReserveTrip';
 
 const App = () => {
   const registration = useSelector((store) => store.registration);
@@ -42,6 +42,7 @@ const App = () => {
         <Route path="/add-trip" element={<AddTrip />} />
         <Route path="/trips/:id" element={<DetailsPage />} />
         <Route path="/delete-trip/:id" element={<DeleteTrip />} />
+        <Route path="/home/:id/reserve" element={<ReserveTrip />} />
         <Route path="/my-reservations" element={<MyResevationsPage />} />
       </Route>
     </Routes>
