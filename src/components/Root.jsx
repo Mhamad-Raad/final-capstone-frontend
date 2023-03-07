@@ -15,7 +15,7 @@ const RootLayout = () => (
           <Link to="/my-reservations">My Reservations</Link>
         </li>
         <li>
-          <Link to="/delet-trip/:id">Delete a Trip</Link>
+          <Link to="/delete-trip">Delete a Trip</Link>
         </li>
         <li>
           <Link to="home/0/reserve">

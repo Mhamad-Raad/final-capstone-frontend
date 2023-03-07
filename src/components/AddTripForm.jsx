@@ -75,7 +75,6 @@ const AddTripForm = () => {
           <span className="rate-title">Rate: </span>
           <Rating
             defaultValue={2.5}
-            precision={0.5}
             size="large"
             className="rates-trip"
             onChange={(e) => setRating(e.target.value)}
