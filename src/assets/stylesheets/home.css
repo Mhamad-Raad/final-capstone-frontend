@@ -58,11 +58,6 @@
   margin-bottom: 5px;
 }
 
-.trip-info p {
-  font-size: 16px;
-  color: #999;
-}
-
 .arrow-button {
   position: absolute;
   top: 50%;
@@ -74,6 +69,11 @@
   border-radius: 50%;
   cursor: pointer;
   color: blue;
+}
+
+.home-trip-description {
+  color: #999;
+  font-size: 12px;
 }
 
 .left-arrow {

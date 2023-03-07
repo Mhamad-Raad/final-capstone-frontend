@@ -54,11 +54,11 @@ const Home = () => {
           <Link to={`/trips/${trip.id}`} key={trip.id} className="trip-card">
             <img src={trip.image_url} alt={trip.destination_city} className="home-img" />
             <div className="trip-info">
-              <h2>{trip.destination_city}</h2>
+              <h2>{trip?.destination_city.toUpperCase()}</h2>
               <DotSeperator style={itemDotStyle}>
                 ............
               </DotSeperator>
-              <p>{trip.price}</p>
+              <p className="home-trip-description">{trip.description}</p>
             </div>
           </Link>
         ))}
