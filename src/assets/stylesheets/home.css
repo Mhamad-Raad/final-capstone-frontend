@@ -1,6 +1,8 @@
 .home-page {
   height: 100vh;
   width: 100%;
+  position: relative;
+  align-items: center;
 }
 
 .home-page-header {
@@ -23,11 +25,10 @@
 }
 
 .trip-cards-container {
-  display: flex;
   overflow-x: hidden;
   position: relative;
-  width: 100%;
-  justify-content: center; /* horizontally center the row of cards */
+  width: 80%;
+  justify-content: flex-start; /* horizontally center the row of cards */
   align-items: center; /* vertically center the row of cards */
 }
 

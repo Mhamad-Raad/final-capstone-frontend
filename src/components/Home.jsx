@@ -42,7 +42,7 @@ const Home = () => {
         <DotSeperator style={headerStyle} />
       </div>
 
-      <div className="trip-cards-container">
+      <div className="trip-cards-container row">
         {trips.slice(startIndex, endIndex + 1).map((trip) => (
           <Link to={`/trips/${trip.id}`} key={trip.id} className="trip-card">
             <img src={trip.image_url} alt={trip.destination_city} className="home-img" />
@@ -53,14 +53,14 @@ const Home = () => {
           </Link>
         ))}
 
-        <button type="button" className="arrow-button left-arrow" onClick={handleClickLeft}>
-          <i className="fa fa-angle-left" />
-        </button>
-
-        <button type="button" className="arrow-button right-arrow" onClick={handleClickRight}>
-          <i className="fa fa-angle-right" />
-        </button>
       </div>
+      <button type="button" className="arrow-button left-arrow" onClick={handleClickLeft}>
+        <i className="fa fa-angle-left" />
+      </button>
+
+      <button type="button" className="arrow-button right-arrow" onClick={handleClickRight}>
+        <i className="fa fa-angle-right" />
+      </button>
     </div>
   );
 };
