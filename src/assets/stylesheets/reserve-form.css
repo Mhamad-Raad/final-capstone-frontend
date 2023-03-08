@@ -32,6 +32,12 @@ label > input,
   border: 1px solid var(--metalic-brown);
 }
 
+.reserve-form-time,
+.reserve-form-date {
+  padding: 5px 10px;
+  border-radius: 8px;
+}
+
 .username {
   background-color: transparent;
   width: 50%;
@@ -42,6 +48,7 @@ label > input,
   box-shadow: none;
   border-radius: 8px;
   border: 1px solid var(--metalic-brown);
+  padding-left: 10px;
 }
 
 .reserve_title {

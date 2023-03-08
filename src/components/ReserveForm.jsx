@@ -89,8 +89,8 @@ export default function ReserveForm({ trip, trips }) {
           <option value="Sulaimaniyah">Sulaimaniyah</option>
           <option value="Erbil">Erbil</option>
         </select>
-        <input type="time" ref={timeRef} required />
-        <input type="date" ref={dateRef} required />
+        <input type="time" ref={timeRef} required className="reserve-form-time" />
+        <input type="date" ref={dateRef} required className="reserve-form-date" />
         <button type="button" onClick={reserveHandler} className="reserve-btn">
           Reserve
         </button>
