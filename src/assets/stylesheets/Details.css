@@ -7,12 +7,13 @@
 
 .bg_image {
   width: 60%;
+  height: 100vh;
   position: relative;
 }
 
 .details-img {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -83,17 +84,27 @@
 @media (max-width: 700px) {
   .details.row {
     flex-direction: column;
+    overflow-y: scroll;
+    justify-content: flex-start;
+    align-items: center;
   }
 
   .bg_image {
     width: 100%;
-    height: 50%;
+    height: 30vh;
     margin-bottom: 20px;
   }
 
   .back_button {
-    top: 20px;
+    top: 10px;
     bottom: auto;
+    right: 0;
+    left: auto;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 50%;
+    border-top-left-radius: 50%;
+    position: fixed;
   }
 
   .info {
@@ -103,7 +114,12 @@
     align-items: center;
   }
 
-  .reserve-btn {
-    margin-bottom: 20px;
+  .home-reserve-btn {
+    margin-bottom: 100px;
+  }
+
+  .description {
+    font-size: 14px;
+    text-align: center;
   }
 }
