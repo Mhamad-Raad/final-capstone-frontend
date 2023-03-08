@@ -4,8 +4,8 @@ import { useEffect } from 'react';
 import { AiOutlineSetting } from 'react-icons/ai';
 import { BsArrowRightCircle } from 'react-icons/bs';
 import { IoChevronBackCircleOutline } from 'react-icons/io5';
-import { fetchTrips } from '../../redux/tripSlice';
-import '../../assets/stylesheets/Details.css';
+import { fetchTrips } from '../redux/tripSlice';
+import '../assets/stylesheets/Details.css';
 
 // the commented code is for future use
 
