@@ -54,7 +54,7 @@ const RootLayout = () => {
       <nav className="mobile-nav column">
         {!opened && (
         <button
-          className="hamburger"
+          className="hamburger column"
           onClick={openHandler}
           type="button"
         >

@@ -67,22 +67,6 @@
   display: none;
 }
 
-.hamburger {
-  width: 30px;
-  margin-right: 0;
-  cursor: pointer;
-  border: none;
-  background-color: transparent;
-}
-
-.line {
-  height: 2px;
-  min-height: 1.5px;
-  background-color: black;
-  border-radius: 8px;
-  margin-bottom: 7px;
-}
-
 .close {
   z-index: 100;
   position: relative;
@@ -103,15 +87,20 @@
   border-radius: 8px;
 }
 
-.line1 {
-  transform: rotate(45deg);
-}
-
-.line2 {
-  transform: rotate(-45deg);
+.hamburger {
+  display: none;
 }
 
 @media only screen and (max-width: 600px) {
+  .line {
+    width: 30px;
+    height: 2px;
+    min-height: 1.5px;
+    background-color: black;
+    border-radius: 8px;
+    margin-bottom: 7px;
+  }
+
   .desktop-nav {
     display: none !important;
   }
@@ -123,6 +112,23 @@
     top: 20px;
     left: 10px;
     z-index: 100;
+  }
+
+  .hamburger {
+    display: flex;
+    width: 30px;
+    margin-right: 0;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+  }
+
+  .line1 {
+    transform: rotate(45deg);
+  }
+
+  .line2 {
+    transform: rotate(-45deg);
   }
 }
 
