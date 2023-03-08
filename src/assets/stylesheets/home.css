@@ -107,3 +107,25 @@
   justify-content: center;
   gap: 5rem;
 }
+
+@media (max-width: 700px) {
+  .home-page {
+    height: auto;
+    overflow-y: scroll;
+  }
+
+  .arrow-button {
+    top: auto;
+    bottom: 75px !important;
+    position: fixed;
+  }
+
+  .trip-cards-container {
+    width: 100%;
+    flex-direction: column !important;
+    gap: 20px;
+    display: block;
+    overflow-x: visible;
+    margin-bottom: 150px;
+  }
+}
