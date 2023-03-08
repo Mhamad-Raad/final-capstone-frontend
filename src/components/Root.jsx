@@ -51,7 +51,7 @@ const RootLayout = () => {
           </div>
         </div>
       </nav>
-      <nav className="mobile-nav row">
+      <nav className="mobile-nav column">
         {!opened && (
         <button
           className="hamburger"
@@ -74,39 +74,40 @@ const RootLayout = () => {
             <div className="line2" />
           </button>
         )}
-        {opened && <div className="overlay" />}
-        {/* <div className="mob-nav-logo">
-          <h1 className="mob-nav-logo">Travel App</h1>
-          <ul className="row">
-            <li>
-              <NavLink to="home">Home</NavLink>
-            </li>
-            <li>
-              <NavLink to="/add-trip">Add New Trip</NavLink>
-            </li>
-            <li>
-              <NavLink to="/my-reservations">My Reservations</NavLink>
-            </li>
-            <li>
-              <NavLink to="/delete-trip">Delete a Trip</NavLink>
-            </li>
-            <li>
-              <NavLink to="/reserve/0" className={isReserve ? 'active' : ''}>
-                Reserve a Trip
-              </NavLink>
-            </li>
-          </ul>
-          <div className="mob-copy-right row">
-            <p>
-              &copy; 2021 Travel App made by:
-            </p>
-            <div className="creator-names row">
-              <a href="https://www.linkedin.com/in/mhamad-raad">Mhamad Raad</a>
-              <a href="https://www.linkedin.com/in/shaker-abady">Shaker Abady</a>
-              <a href="https://www.linkedin.com/in/kanza-tahreem/">Kanza Tahreem</a>
+        {opened && (
+          <div className="overlay column">
+            <h1 className="mob-nav-logo">Travel App</h1>
+            <ul className="column">
+              <li>
+                <NavLink to="home">Home</NavLink>
+              </li>
+              <li>
+                <NavLink to="/add-trip">Add New Trip</NavLink>
+              </li>
+              <li>
+                <NavLink to="/my-reservations">My Reservations</NavLink>
+              </li>
+              <li>
+                <NavLink to="/delete-trip">Delete a Trip</NavLink>
+              </li>
+              <li>
+                <NavLink to="/reserve/0" className={isReserve ? 'active' : ''}>
+                  Reserve a Trip
+                </NavLink>
+              </li>
+            </ul>
+            <div className="mob-copy-right column">
+              <p>
+                &copy; 2021 Travel App made by
+              </p>
+              <div className="creator-names row">
+                <a href="https://www.linkedin.com/in/mhamad-raad">Mhamad Raad</a>
+                <a href="https://www.linkedin.com/in/shaker-abady">Shaker Abady</a>
+                <a href="https://www.linkedin.com/in/kanza-tahreem/">Kanza Tahreem</a>
+              </div>
             </div>
           </div>
-        </div> */}
+        )}
       </nav>
       <Outlet />
     </div>

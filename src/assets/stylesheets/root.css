@@ -120,11 +120,8 @@
     display: flex !important;
     width: 100%;
     height: 60px;
-    background-color: white;
-    border-bottom: 1px solid #ddd;
-    position: fixed;
-    top: 0;
-    left: 0;
+    top: 20px;
+    left: 10px;
     z-index: 100;
   }
 }
@@ -138,4 +135,39 @@
   background-color: var(--background);
   z-index: 99;
   border: none;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.mob-nav-logo {
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+.mobile-nav > .overlay > ul {
+  width: 100%;
+  gap: 10px;
+}
+
+.mobile-nav > .overlay > ul > li > a {
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  display: block;
+  text-align: center;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.mob-copy-right {
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+
+.mob-copy-right > p {
+  margin-bottom: 10px;
 }
