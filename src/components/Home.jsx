@@ -82,7 +82,11 @@ const Home = () => {
         type="button"
         className="arrow-button right-arrow"
         onClick={handleClickRight}
-        style={endIndex - 1 === trips.length ? arrowsEndStyle : null}
+        style={(endIndex - 1 === trips.length
+          || endIndex === trips.length
+          || endIndex + 1 === trips.lenght)
+          ? arrowsEndStyle
+          : null}
       >
         <BsCaretRight />
       </button>
