@@ -2,4 +2,13 @@
   padding: 20px;
   margin-top: 10px;
   gap: 10px;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .my-reservations {
+    padding: 10px;
+    margin-top: 100px;
+    align-items: center;
+  }
 }
