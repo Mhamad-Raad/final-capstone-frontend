@@ -42,7 +42,7 @@ export default function ReserveForm({ trip, trips }) {
         navigate('/home');
       });
 
-    navigate('/reservations');
+    navigate('/my-reservations');
   };
 
   const destination = trip?.destination_city[0].toUpperCase() + trip?.destination_city.slice(1);
