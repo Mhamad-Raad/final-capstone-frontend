@@ -79,19 +79,19 @@ const RootLayout = () => {
             <h1 className="mob-nav-logo">Travel App</h1>
             <ul className="column">
               <li>
-                <NavLink to="home">Home</NavLink>
+                <NavLink to="home" onClick={closeHandler}>Home</NavLink>
               </li>
               <li>
-                <NavLink to="/add-trip">Add New Trip</NavLink>
+                <NavLink to="/add-trip" onClick={closeHandler}>Add New Trip</NavLink>
               </li>
               <li>
-                <NavLink to="/my-reservations">My Reservations</NavLink>
+                <NavLink to="/my-reservations" onClick={closeHandler}>My Reservations</NavLink>
               </li>
               <li>
-                <NavLink to="/delete-trip">Delete a Trip</NavLink>
+                <NavLink to="/delete-trip" onClick={closeHandler}>Delete a Trip</NavLink>
               </li>
               <li>
-                <NavLink to="/reserve/0" className={isReserve ? 'active' : ''}>
+                <NavLink to="/reserve/0" className={isReserve ? 'active' : ''} onClick={closeHandler}>
                   Reserve a Trip
                 </NavLink>
               </li>
