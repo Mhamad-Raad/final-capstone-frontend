@@ -1,6 +1,8 @@
 import { Outlet, NavLink, useLocation } from 'react-router-dom';
 import { useState } from 'react';
 import '../assets/stylesheets/root.css';
+import Footer from './Footer';
+import logo from '../assets/images/logo.png';
 
 const RootLayout = () => {
   const location = useLocation();
@@ -20,7 +22,7 @@ const RootLayout = () => {
   return (
     <div className="root-layout">
       <nav className="desktop-nav column">
-        <h1 className="desk-nav-logo">Travel App</h1>
+        <img className="desk-nav-logo" src={logo} alt="app-logo" />
         <ul className="column">
           <li>
             <NavLink to="home">Home</NavLink>
@@ -41,14 +43,7 @@ const RootLayout = () => {
           </li>
         </ul>
         <div className="desk-copy-right column">
-          <p>
-            &copy; 2021 Travel App made by:
-          </p>
-          <div className="creator-names row">
-            <a href="https://www.linkedin.com/in/mhamad-raad">Mhamad Raad</a>
-            <a href="https://www.linkedin.com/in/shaker-abady">Shaker Abady</a>
-            <a href="https://www.linkedin.com/in/kanza-tahreem/">Kanza Tahreem</a>
-          </div>
+          <Footer />
         </div>
       </nav>
       <nav className="mobile-nav column">
@@ -76,7 +71,7 @@ const RootLayout = () => {
         )}
         {opened && (
           <div className="overlay column">
-            <h1 className="mob-nav-logo">Travel App</h1>
+            <img className="desk-nav-logo" src={logo} alt="app-logo" />
             <ul className="column">
               <li>
                 <NavLink to="home" onClick={closeHandler}>Home</NavLink>
@@ -97,14 +92,7 @@ const RootLayout = () => {
               </li>
             </ul>
             <div className="mob-copy-right column">
-              <p>
-                &copy; 2021 Travel App made by
-              </p>
-              <div className="creator-names row">
-                <a href="https://www.linkedin.com/in/mhamad-raad">Mhamad Raad</a>
-                <a href="https://www.linkedin.com/in/shaker-abady">Shaker Abady</a>
-                <a href="https://www.linkedin.com/in/kanza-tahreem/">Kanza Tahreem</a>
-              </div>
+              <Footer />
             </div>
           </div>
         )}
