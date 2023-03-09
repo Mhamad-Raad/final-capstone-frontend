@@ -74,7 +74,7 @@ export default function Details() {
           {trip?.description}
         </p>
 
-        <Link className="home-reserve-btn row" to={`/reserve/${trip?.id}`}>
+        <Link className="home-reserve-btn row" to={`/reserve/${trip?.id}`} data-testid="reservation-link">
           <AiOutlineSetting />
           Reserve
           <BsArrowRightCircle />
