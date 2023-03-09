@@ -15,7 +15,7 @@ export default function ReserveForm({ trip, trips }) {
   const reserveHandler = () => {
     if (tripIdRef.current.value === '' || departureCity.current.value === ''
       || timeRef.current.value === '' || dateRef.current.value === '') {
-      // window.alert('Please fill all the fields');
+      window.alert('Please fill all the fields');
       return;
     }
 
@@ -38,7 +38,7 @@ export default function ReserveForm({ trip, trips }) {
       .then((res) => res.json())
       .then((data) => data)
       .catch(() => {
-        // window.alert(er.message);
+        window.alert(er.message);
         navigate('/home');
       });
 
