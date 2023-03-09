@@ -20,7 +20,7 @@ const SignIn = () => {
 
   return (
     <section className="session-page">
-      <div className="overlay">
+      <div className="over-lay">
         <div className="form-container">
           <div className="image" />
           <div className="text-column">
