@@ -1,0 +1,123 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RootLayout should match the snapshot 1`] = `
+<div
+  className="root-layout"
+>
+  <nav
+    className="desktop-nav column"
+  >
+    <img
+      alt="app-logo"
+      className="desk-nav-logo"
+      src="logo.png"
+    />
+    <ul
+      className="column"
+    >
+      <li>
+        <a
+          className=""
+          data-testid="navlink"
+          href="/home"
+          onClick={[Function]}
+        >
+          Home
+        </a>
+      </li>
+      <li>
+        <a
+          className=""
+          data-testid="navlink"
+          href="/add-trip"
+          onClick={[Function]}
+        >
+          Add New Trip
+        </a>
+      </li>
+      <li>
+        <a
+          className=""
+          data-testid="navlink"
+          href="/my-reservations"
+          onClick={[Function]}
+        >
+          My Reservations
+        </a>
+      </li>
+      <li>
+        <a
+          className=""
+          data-testid="navlink"
+          href="/delete-trip"
+          onClick={[Function]}
+        >
+          Delete a Trip
+        </a>
+      </li>
+      <li>
+        <a
+          className=""
+          data-testid="navlink"
+          href="/reserve/0"
+          onClick={[Function]}
+        >
+          Reserve a Trip
+        </a>
+      </li>
+    </ul>
+    <div
+      className="desk-copy-right column"
+    >
+      <p
+        className="footer"
+      >
+        Copyright © 2023
+        <br />
+        <a
+          href="https://github.com/KanzaTahreem"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Kanza
+        </a>
+        , 
+        <a
+          href="https://github.com/shakerAbuDrais"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Shaker
+        </a>
+         & 
+        <a
+          href="https://github.com/Mhamad-Raad/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Mhamad
+        </a>
+      </p>
+    </div>
+  </nav>
+  <nav
+    className="mobile-nav column"
+  >
+    <button
+      className="hamburger column"
+      onClick={[Function]}
+      type="button"
+    >
+      <div
+        className="line"
+      />
+      <div
+        className="line"
+      />
+      <div
+        className="line"
+      />
+    </button>
+  </nav>
+</div>
+`;
