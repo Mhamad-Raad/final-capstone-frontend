@@ -123,7 +123,6 @@
     width: 100%;
     flex-direction: column !important;
     gap: 20px;
-    display: block;
     overflow-x: visible;
     margin-bottom: 150px;
   }
