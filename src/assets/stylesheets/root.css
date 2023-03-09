@@ -101,7 +101,7 @@
     width: 30px;
     height: 2px;
     min-height: 1.5px;
-    background-color: black;
+    background: var(--dark-lemon-lime);
     border-radius: 8px;
     margin-bottom: 7px;
   }

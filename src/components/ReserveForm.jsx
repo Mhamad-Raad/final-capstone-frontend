@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import '../assets/stylesheets/reserve-form.css';
+import '../assets/stylesheets/reservation.css';
 
 export default function ReserveForm({ trip, trips }) {
   const navigate = useNavigate();
