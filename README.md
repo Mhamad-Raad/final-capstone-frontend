@@ -26,10 +26,13 @@
 
 # 📖 Reserve Trip Application <a name="about-project"></a>
 
-**[Reserve Trip Application]** This project, created React, to simply show case front end and backend working together.
+**[Reserve Trip Application]** This project is for users who would want to reserve a trip, or add a trip that people would want to take or attend, users can 
+reserve trips and login in which there is authentication developed for it.
 ## 🛠 Built With <a name="built-with"></a>
 
-Built with React
+- React.
+- Redux.
+- React-Icons.
 
 ### Tech Stack <a name="tech-stack"></a>
 
@@ -39,20 +42,18 @@ Built with React
     <li><a href="https://reactjs.org/">React</a> </li>
   </ul>
 </details>
-
-<details>
-<summary>Database</summary>
-  <ul>
-    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
-  </ul>
-</details>
-
 <!-- Features -->
 
 ### Key Features <a name="key-features"></a>
 
 - Connection between rails and React.
 - Connected to posgresql.
+- Authentication.
+- Users can reserve trips.
+- Users can see their own reservations.
+- Users can view available trips from the home page.
+- Users can see the details of each trip.
+- Users can add/delete trips.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -66,22 +67,24 @@ To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
-In order to run this project you need: `Ruby`, `Rails` and a Database such as PostgreSQL
+- Computer that has an IDE installed.
+- npm.
+- Git.
 
 ### Front-end
-[front-end](https://github.com/Mhamad-Raad/frontend-ror/tree/dev)
+[front-end](https://github.com/Mhamad-Raad/final-capstone-frontend)
 
 
 ### Backend
-[back-end](https://github.com/Mhamad-Raad/backend-ror/tree/dev)
+[back-end](https://github.com/Mhamad-Raad/final-capstone-backend)
 
 ### Setup
 
 Clone this repository to your desired folder:
 
 ```
-  git clone https://github.com/Mhamad-Raad/react-seperate-ror.git
-  cd react-ruby-hello
+  git clone https://github.com/Mhamad-Raad/final-capstone-frontend.git
+  cd final-capstone-frontend
 ```
 
 ### Install
@@ -96,7 +99,7 @@ Run the following commands, to be able to use Bootstap and JavsScript. If overwr
 Then run:
 
 ```
- in backend folder
+ in the back-end folder
   bundle install
 
   in the frontend folder
@@ -108,16 +111,28 @@ Then run:
 
 To run the project, execute the following command:
 
+- back-end
 ```
   rails server
 ```
 
+- front-end
+```
+  npm start
+```
 ### Run tests
 
 To run all tests, including unit and integration tests, run the following command:
 
+- back-end
+
 ```
   rspec
+```
+
+- front-end
+```
+  npm run test
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -131,6 +146,14 @@ To run all tests, including unit and integration tests, run the following comman
 - GitHub: [@githubhandle](https://github.com/Mhamad-Raad)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/mhamad-raad)
 
+👤 **Kanza Tahreem**
+- GitHub: [@githubhandle](https://github.com/KanzaTahreem)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/kanza-tahreem/)
+
+👤 **Shaker Abady**
+- GitHub: [@githubhandle](https://github.com/shakerAbuDrais)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/shaker-abady/)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -138,11 +161,10 @@ To run all tests, including unit and integration tests, run the following comman
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- Add styles.
+- Add animations.
+- Add Autharization.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 ## 
 
@@ -152,7 +174,7 @@ To run all tests, including unit and integration tests, run the following comman
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/Mhamad-Raad/react-seperate-ror/issues).
+Feel free to check the [issues page](https://github.com/Mhamad-Raad/final-capstone-frontend/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -169,6 +191,7 @@ If you like this project please give it a ⭐️!
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 - Thank you to microverse for setting us on this journey.
+- Thanks and appreciation to [Murat Korkmaz](https://www.behance.net/gallery/26425031/Vespa-Responsive-Redesign) in which his design had an influnced on this design.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
