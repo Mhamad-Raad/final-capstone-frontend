@@ -118,6 +118,14 @@ button {
   font-style: italic;
 }
 
+/* ----------Dot Seperator---------- */
+.dot-seperator {
+  letter-spacing: 3px;
+  color: rgb(205, 205, 205);
+  font-size: 10px;
+  font-weight: 600;
+}
+
 /* ----------Footer---------- */
 
 .footer {
