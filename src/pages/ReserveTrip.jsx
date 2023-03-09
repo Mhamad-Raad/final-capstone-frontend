@@ -1,9 +1,9 @@
 import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-
 import { fetchTrips } from '../redux/tripSlice';
 import ReserveForm from '../components/ReserveForm';
+import Loader from '../components/Loader';
 import '../assets/stylesheets/reservation.css';
 
 export default function ReserveTrip() {
@@ -19,7 +19,7 @@ export default function ReserveTrip() {
   const trips = useSelector((state) => state.trips.trips);
 
   if (status === 'loading') {
-    return <div>Loading...</div>;
+    return <Loader />;
   }
 
   const trip = trips.find((trip) => trip.id === +id);
