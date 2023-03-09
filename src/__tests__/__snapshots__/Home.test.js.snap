@@ -1,0 +1,95 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing Home should match the snapshot 1`] = `
+<div
+  className="column home-page"
+>
+  <div
+    className="home-page-header column"
+  >
+    <h1
+      className="home-title"
+    >
+      Explore the world
+    </h1>
+    <p
+      className="home-subtitle"
+    >
+      Find your next adventure
+    </p>
+    <p
+      className="dot-seperator"
+      style={
+        Object {
+          "marginTop": "25px",
+        }
+      }
+    >
+      ..........................
+    </p>
+  </div>
+  <div
+    className="trip-cards-container row"
+  />
+  <button
+    className="arrow-button left-arrow"
+    data-testid="left-arrow"
+    onClick={[Function]}
+    style={
+      Object {
+        "backgroundColor": "grey",
+      }
+    }
+    type="button"
+  >
+    <svg
+      fill="currentColor"
+      height="1em"
+      stroke="currentColor"
+      strokeWidth="0"
+      style={
+        Object {
+          "color": undefined,
+        }
+      }
+      viewBox="0 0 16 16"
+      width="1em"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M10 12.796V3.204L4.519 8 10 12.796zm-.659.753-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753z"
+      />
+    </svg>
+  </button>
+  <button
+    className="arrow-button right-arrow"
+    data-testid="right-arrow"
+    onClick={[Function]}
+    style={
+      Object {
+        "backgroundColor": "grey",
+      }
+    }
+    type="button"
+  >
+    <svg
+      fill="currentColor"
+      height="1em"
+      stroke="currentColor"
+      strokeWidth="0"
+      style={
+        Object {
+          "color": undefined,
+        }
+      }
+      viewBox="0 0 16 16"
+      width="1em"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"
+      />
+    </svg>
+  </button>
+</div>
+`;
