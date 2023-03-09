@@ -1,25 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px var(--grey);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--dark-lemon-lime);
+}
+
 :root {
   --white: #fff;
+  --red: #e20d0d;
   --grey: #b9b9b9;
   --flax: #edd590;
-  --red: #e20d0d;
+  --sea-blue: #69c;
   --platinum: #e2e3e5;
   --cadet-gray: #94a6a4;
   --yellow-red: #f0bd59;
   --albaster: #efece6;
-  --overlay: #b5e60ab8;
+  --overlay: #afdc0cc2;
+  --background: #8fb704bd;
   --black-olive: #3b3735;
   --dark-vanilla: #c3cc9b;
   --crystal-blue: #62aea3;
-  --sea-blue: #69c;
   --dark-lemon-lime: #8cb302;
   --spanish-yellow: #f7b217;
   --metalic-brown: #ad4708;
   --metalic-orange: #d46d0d;
-  --background: #8fb704bd;
-  --principalFont: 'Montserrat', sans-serif;
 }
 
 ul {
@@ -56,7 +67,6 @@ h1,
 h2,
 h3,
 p {
-  margin: 0;
   background-color: transparent;
 }
 
@@ -75,12 +85,6 @@ button {
 .column,
 .row {
   display: flex;
-}
-
-h1,
-h2,
-h3 {
-  margin: 0;
 }
 
 /* ----------Message---------- */
