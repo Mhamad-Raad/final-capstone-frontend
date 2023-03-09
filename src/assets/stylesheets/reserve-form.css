@@ -52,7 +52,8 @@ label > input,
 }
 
 .reserve_title {
-  font-size: 2.5rem;
+  font-size: 3rem;
+  padding: 4rem 0;
   font-weight: bolder;
   color: var(--metalic-brown);
   text-align: center;

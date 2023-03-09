@@ -49,7 +49,7 @@ export default function ReserveForm({ trip, trips }) {
 
   return (
     <div className="reserve__container column">
-      {trip !== undefined ? <h1 className="reserve_title">{destination}</h1> : <h1 className="reserve_title">Reserve</h1>}
+      {trip !== undefined ? <h1 className="reserve_title">{destination}</h1> : <h1 className="reserve_title">Reserve a Trip</h1>}
       {trip !== undefined && (
         <p className="reserve_subtitle">
           {`${trip?.destination_city} - ${trip?.description}`}
