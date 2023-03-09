@@ -62,7 +62,7 @@ export default function SignInForm() {
           </button>
         </label>
       </div>
-      <button type="submit" className="submit-btn" onClick={onSubmit}><span>Log In</span></button>
+      <button type="submit" className="submit-btn" data-testid="login-btn" onClick={onSubmit}><span>Log In</span></button>
     </form>
   );
 }
