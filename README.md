@@ -1,70 +1,214 @@
-# Getting Started with Create React App
+<a name="readme-top"></a>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<!-- TABLE OF CONTENTS -->
 
-## Available Scripts
+# 📗 Table of Contents
 
-In the project directory, you can run:
+- [📖 About the Project](#about-project)
+  - [🛠 Built With](#built-with)
+    - [Tech Stack](#tech-stack)
+    - [Key Features](#key-features)
+- [💻 Getting Started](#getting-started)
+  - [Setup](#setup)
+  - [Prerequisites](#prerequisites)
+  - [Install](#install)
+  - [Usage](#usage)
+  - [Run tests](#run-tests)
+  - [Deployment](#triangular_flag_on_post-deployment)
+- [Live Version](#Live)
+- [👥 Authors](#authors)
+- [🔭 Future Features](#future-features)
+- [🤝 Contributing](#contributing)
+- [⭐️ Show your support](#support)
+- [🙏 Acknowledgements](#acknowledgements)
+- [📝 License](#license)
 
-### `npm start`
+<!-- PROJECT DESCRIPTION -->
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# 📖 Reserve Trip Application <a name="about-project"></a>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**[Reserve Trip Application]** This project is for users who would want to reserve a trip, or add a trip that people would want to take or attend, users can 
+reserve trips and login in which there is authentication developed for it.
+## 🛠 Built With <a name="built-with"></a>
 
-### `npm test`
+- React.
+- Redux.
+- React-Icons.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Tech Stack <a name="tech-stack"></a>
 
-### `npm run build`
+<details>
+  <summary>Client</summary>
+  <ul>
+    <li><a href="https://reactjs.org/">React</a> </li>
+  </ul>
+</details>
+<!-- Features -->
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Key Features <a name="key-features"></a>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Connection between rails and React.
+- Connected to posgresql.
+- Authentication.
+- Users can reserve trips.
+- Users can see their own reservations.
+- Users can view available trips from the home page.
+- Users can see the details of each trip.
+- Users can add/delete trips.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### `npm run eject`
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<!-- GETTING STARTED -->
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 💻 Getting Started <a name="getting-started"></a>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+To get a local copy up and running, follow these steps.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Prerequisites
 
-## Learn More
+- Computer that has an IDE installed.
+- npm.
+- Git.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Front-end
+[front-end](https://github.com/Mhamad-Raad/final-capstone-frontend)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+### Backend
+[back-end](https://github.com/Mhamad-Raad/final-capstone-backend)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+## 💻 Deployment <a name="triangular_flag_on_post-deployment"></a>
+In order to to get the production version of the app do the followings:
+- npm run build.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+## Live Version <a name="Live"></a>
+[Link](https://remarkable-buttercream-3be0d2.netlify.app/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Setup
 
-### Advanced Configuration
+Clone this repository to your desired folder:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```
+  git clone https://github.com/Mhamad-Raad/final-capstone-frontend.git
+  cd final-capstone-frontend
+```
 
-### Deployment
+### Install
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Install this project with:
 
-### `npm run build` fails to minify
+Run the following commands, to be able to use Bootstap and JavsScript. If overwrites, type _y_
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
+```
+
+Then run:
+
+```
+ in the back-end folder
+  bundle install
+
+  in the frontend folder
+  npm install
+ 
+```
+
+### Usage
+
+To run the project, execute the following command:
+
+- back-end
+```
+  rails server
+```
+
+- front-end
+```
+  npm start
+```
+### Run tests
+
+To run all tests, including unit and integration tests, run the following command:
+
+- back-end
+
+```
+  rspec
+```
+
+- front-end
+```
+  npm run test
+```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- AUTHORS -->
+
+## 👥 Author <a name="authors"></a>
+
+👤 **Mhamad Raad**
+
+- GitHub: [@githubhandle](https://github.com/Mhamad-Raad)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/mhamad-raad)
+
+👤 **Kanza Tahreem**
+- GitHub: [@githubhandle](https://github.com/KanzaTahreem)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/kanza-tahreem/)
+
+👤 **Shaker Abady**
+- GitHub: [@githubhandle](https://github.com/shakerAbuDrais)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/shaker-abady/)
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- FUTURE FEATURES -->
+
+## 🔭 Future Features <a name="future-features"></a>
+
+- Add animations.
+- Add Autharization.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 
+
+<!-- CONTRIBUTING -->
+
+## 🤝 Contributing <a name="contributing"></a>
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/Mhamad-Raad/final-capstone-frontend/issues).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- SUPPORT -->
+
+## ⭐️ Show your support <a name="support"></a>
+
+If you like this project please give it a ⭐️!
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- ACKNOWLEDGEMENTS -->
+
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+- Thank you to microverse for setting us on this journey.
+- Thanks and appreciation to [Murat Korkmaz](https://www.behance.net/gallery/26425031/Vespa-Responsive-Redesign) in which his design had an influnced on this design.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LICENSE -->
+
+## 📝 License <a name="license"></a>
+
+This project is [MIT](./LICENSE) licensed.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
