@@ -16,7 +16,7 @@ const SignUp = () => {
         details: [],
       }),
     );
-  }, []);
+  }, [dispatch]);
 
   return (
     <section className="session-page signup">

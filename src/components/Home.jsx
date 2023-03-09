@@ -44,8 +44,6 @@ const Home = () => {
     backgroundColor: 'grey',
   };
 
-  console.log(trips.length);
-
   return (
     <div className="column home-page">
       <div className="home-page-header column">
