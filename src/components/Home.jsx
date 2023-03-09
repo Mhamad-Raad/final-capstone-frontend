@@ -64,7 +64,7 @@ const Home = () => {
 
       <div className="trip-cards-container row">
         {trips.slice(startIndex, endIndex + 1).map((trip) => (
-          <Link to={`/home/${trip.id}`} key={trip.id} className="trip-card">
+          <Link to={`/home/${trip.id}`} key={trip.id} className="trip-card" data-testid="trip-card">
             <div className="image-div"><img src={trip.image_url} alt={trip.destination_city} className="home-img" /></div>
             <div className="trip-info">
               <h2>
@@ -93,6 +93,7 @@ const Home = () => {
       <button
         type="button"
         className="arrow-button left-arrow"
+        data-testid="left-arrow"
         onClick={handleClickLeft}
         style={startIndex === 0 ? arrowsEndStyle : null}
       >
@@ -102,6 +103,7 @@ const Home = () => {
       <button
         type="button"
         className="arrow-button right-arrow"
+        data-testid="right-arrow"
         onClick={handleClickRight}
         style={(endIndex - 1 === trips.length
           || endIndex === trips.length

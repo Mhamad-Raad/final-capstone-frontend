@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RootLayout should match the snapshot 1`] = `
+<section
+  className="delete-page"
+>
+  <div
+    className="content"
+  >
+    <h1>
+      Available Trips
+    </h1>
+    <p
+      className="message"
+    >
+      We have 0 trips available.
+  Add some trips!
+    </p>
+    <div
+      className="all-trips"
+    />
+  </div>
+</section>
+`;

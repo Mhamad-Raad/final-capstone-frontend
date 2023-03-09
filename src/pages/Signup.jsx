@@ -29,7 +29,7 @@ const SignUp = () => {
             <SignUpForm />
             <p>
               Already have an account?
-              <Link to="/sign-in" className="link"> Sign In</Link>
+              <Link to="/sign-in" className="link" data-testid="link"> Sign In</Link>
             </p>
           </div>
           <div className="image" />
