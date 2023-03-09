@@ -47,16 +47,22 @@ export default function SignUpForm() {
     setName(event.target.value);
   };
 
+  const dispatchSetError = (msg, value, details) => dispatch(
+    setError({
+      msg,
+      value,
+      details,
+    }),
+  );
+
   const onSubmit = (event) => {
     event.preventDefault();
     if (name && email && passwordInput && confirmPasswordInput) {
       if (passwordInput !== confirmPasswordInput) {
-        dispatch(
-          setError({
-            msg: 'Unable to create an account',
-            value: 'Passwords do not match',
-            details: [],
-          }),
+        dispatchSetError(
+          'Unable to create an account',
+          'Passwords do not match',
+          [],
         );
       } else {
         dispatch(fetchSignUp({
@@ -64,12 +70,10 @@ export default function SignUpForm() {
         }));
       }
     } else {
-      dispatch(
-        setError({
-          msg: 'Cannot submit',
-          value: 'Please fill all fields',
-          details: [],
-        }),
+      dispatchSetError(
+        'Cannot submit',
+        'Please fill all fields',
+        [],
       );
     }
   };
@@ -106,7 +110,7 @@ export default function SignUpForm() {
           </button>
         </label>
       </div>
-      <button type="submit" className="submit-btn" onClick={onSubmit}><span>Sign up</span></button>
+      <button type="submit" className="submit-btn" onClick={onSubmit}><span data-testid="submit">Sign up</span></button>
     </form>
   );
 }
