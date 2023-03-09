@@ -8,7 +8,6 @@ const store = configureStore({
   reducer: {
     reserveItems,
     trips: tripSlice,
-    // cartItems,
     session: sessionSlice,
   },
 });
