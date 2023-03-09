@@ -1,11 +1,13 @@
 import { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { Rating } from '@mui/material';
 import { addTrip } from '../redux/tripSlice';
-
+import Loader from './Loader';
 import '../assets/stylesheets/addtrip.css';
 
 const AddTripForm = () => {
+  const status = useSelector((state) => state.trips.status);
+
   const [addSuccess, setAddSuccess] = useState(false);
   const [addFailed, setAddFailed] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -21,6 +23,14 @@ const AddTripForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!price || !rating || !destinationCity || !image || !description) {
+      setAddFailed(true);
+      setTimeout(() => {
+        setAddFailed(false);
+      }, 3000);
+      return;
+    }
+
     const formData = new FormData();
     formData.append('price', price);
     formData.append('rating', rating);
@@ -51,65 +61,82 @@ const AddTripForm = () => {
     setDescription('');
   };
 
+  if (status === 'loading') {
+    return <Loader />;
+  }
+
   return (
-    <div className="add-trip-page column">
-      <h2 className="trip-header">Add Trip</h2>
+    <section className="add-trip-page">
+      <h1>Add a New Trip</h1>
+      <h2>Fill out the informtaion below to add a new trip!</h2>
       {addSuccess && <p className="success-msg msg">Trip added successfully!</p>}
-      {addFailed && <p className="error-msg msg">Failed to add a trip! Pleae try again later</p>}
+      {addFailed && <p className="error-msg msg">Failed to add a trip. Please fill all fields!</p>}
       {loading && <p className="loading-msg msg">Adding trip...</p>}
 
-      <form onSubmit={handleSubmit} className="add-trip-form column">
-        <span className="currencyinput row">
-          <input
-            type="number"
-            className="add-trip-price"
-            value={price}
-            onChange={(e) => setPrice(e.target.value)}
-            placeholder="Price"
-            required
-          />
-          $
-        </span>
+      <div>
+        <div className="form-container">
+          <form onSubmit={handleSubmit} className="column">
+            <div className="form-group">
+              <Rating
+                defaultValue={2.5}
+                size="large"
+                className="rates-trip"
+                onChange={(e) => setRating(e.target.value)}
+              />
+              <span className="row rating-row" />
+            </div>
+            <div className="form-group form-image">
+              <label htmlFor="image">
+                <input
+                  type="file"
+                  id="image"
+                  accept=".jpg, .jpeg, .png"
+                  onChange={(e) => setImage(e.target.files[0])}
+                />
+              </label>
+            </div>
+            <div className="form-group">
+              <label htmlFor="number">
+                <input
+                  type="number"
+                  className="add-trip-price"
+                  value={price}
+                  onChange={(e) => setPrice(e.target.value)}
+                  required
+                />
+                <span className="row">Price</span>
+              </label>
+            </div>
 
-        <span className="row rating-row">
-          <span className="rate-title">Rate: </span>
-          <Rating
-            defaultValue={2.5}
-            size="large"
-            className="rates-trip"
-            onChange={(e) => setRating(e.target.value)}
-          />
-        </span>
+            <div className="form-group">
+              <label htmlFor="text">
+                <input
+                  type="text"
+                  value={destinationCity}
+                  onChange={(e) => setDestinationCity(e.target.value)}
+                  required
+                />
+                <span>Destination City</span>
+              </label>
+            </div>
 
-        <input
-          type="text"
-          value={destinationCity}
-          onChange={(e) => setDestinationCity(e.target.value)}
-          placeholder="Destination City"
-          required
-        />
+            <div className="form-group">
+              <label htmlFor="text">
+                <textarea
+                  type="text"
+                  value={description}
+                  onChange={(e) => setDescription(e.target.value)}
+                  required
+                />
+                <span>Description</span>
+              </label>
+            </div>
 
-        <span className="image-row row">
-          <span className="image-title">
-            Image:
-          </span>
-          <input
-            type="file"
-            id="image"
-            accept=".jpg, .jpeg, .png"
-            onChange={(e) => setImage(e.target.files[0])}
-          />
-        </span>
-
-        <textarea
-          value={description}
-          onChange={(e) => setDescription(e.target.value)}
-          placeholder="Description"
-        />
-
-        <button type="submit">Add Trip</button>
-      </form>
-    </div>
+            <button type="submit" className="submit-btn">Add Trip</button>
+          </form>
+        </div>
+      </div>
+    </section>
   );
 };
 
