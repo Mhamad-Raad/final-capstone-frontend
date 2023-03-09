@@ -15,6 +15,7 @@
   - [Usage](#usage)
   - [Run tests](#run-tests)
   - [Deployment](#triangular_flag_on_post-deployment)
+  - [Live Version](#Live)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
@@ -80,7 +81,11 @@ To get a local copy up and running, follow these steps.
 
 
 ## 💻 Deployment <a name="triangular_flag_on_post-deployment"></a>
+In order to to get the production version of the app do the followings:
+- npm run build.
 
+
+## Live Version <a name="Live"></a>
 [Link](https://remarkable-buttercream-3be0d2.netlify.app/)
 
 ### Setup
