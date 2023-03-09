@@ -2,10 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { FaTrashAlt } from 'react-icons/fa';
 import { fetchTrips, deleteTrip } from '../redux/tripSlice';
+import Loader from '../components/Loader';
 import '../assets/stylesheets/delete.css';
 
 const DeleteTrip = () => {
   const trips = useSelector((state) => state.trips.trips);
+  const status = useSelector((state) => state.trips.status);
+
   const dispatch = useDispatch();
   const [deleteSuccess, setDeleteSuccess] = useState(false);
   const [deleteFailed, setDeleteFailed] = useState(false);
@@ -33,6 +36,10 @@ const DeleteTrip = () => {
     }
   };
 
+  if (status === 'loading') {
+    return <Loader />;
+  }
+
   const availableTrips = trips.length;
 
   const message = `We have ${availableTrips} trip${availableTrips !== 1 ? 's' : ''} available.
@@ -51,7 +58,10 @@ const DeleteTrip = () => {
             <div className="single-trip" key={trip.id}>
               <img src={trip.image_url} alt={trip.destination_city} />
               <div className="trip-content">
-                <h2>{trip.destination_city}</h2>
+                <h2>
+                  {trip.destination_city.split(' ').slice(0, 3).join(' ')}
+                  {trip.destination_city.split(' ').length > 3 ? '...' : ''}
+                </h2>
                 <p>
                   $
                   {trip.price}

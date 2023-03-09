@@ -1,6 +1,11 @@
 import './App.css';
-import { Route, useNavigate, Routes } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import {
+  Route,
+  useNavigate,
+  Routes,
+  useLocation,
+} from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import Signup from './pages/Signup';
 import SignIn from './pages/SignIn';
@@ -55,11 +60,11 @@ const App = () => {
       <Route path="/sign-up" element={<Signup />} />
       <Route path="/sign-in" element={<SignIn />} />
       <Route path="/" element={<RootLayout />}>
-        <Route path="/home" element={<Home />} />
+        <Route path="/home" element={<Home />} exact end />
         <Route path="/add-trip" element={<AddTrip />} />
-        <Route path="/trips/:id" element={<DetailsPage />} />
+        <Route path="/home/:id" element={<DetailsPage />} />
         <Route path="/delete-trip" element={<DeleteTrip />} />
-        <Route path="/home/:id/reserve" element={<ReserveTrip />} />
+        <Route path="/reserve/:id" element={<ReserveTrip />} />
         <Route path="/my-reservations" element={<MyResevationsPage />} />
       </Route>
     </Routes>

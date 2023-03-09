@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 
 import { fetchTrips } from '../redux/tripSlice';
 import ReserveForm from '../components/ReserveForm';
-import '../assets/stylesheets/reserve.css';
+import '../assets/stylesheets/reservation.css';
 
 export default function ReserveTrip() {
   const { id } = useParams();

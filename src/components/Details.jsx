@@ -4,8 +4,9 @@ import { useEffect } from 'react';
 import { AiOutlineSetting } from 'react-icons/ai';
 import { BsArrowRightCircle } from 'react-icons/bs';
 import { IoChevronBackCircleOutline } from 'react-icons/io5';
-import { fetchTrips } from '../../redux/tripSlice';
-import '../../assets/stylesheets/Details.css';
+import { fetchTrips } from '../redux/tripSlice';
+import Loader from './Loader';
+import '../assets/stylesheets/Details.css';
 
 // the commented code is for future use
 
@@ -22,7 +23,7 @@ export default function Details() {
   const trips = useSelector((state) => state.trips.trips);
 
   if (status === 'loading') {
-    return <div>Loading...</div>;
+    return <Loader />;
   }
 
   const trip = trips.find((trip) => trip.id === +id);
@@ -50,6 +51,7 @@ export default function Details() {
 
       <div className="info column">
         <h1 className="info-title">{trip?.destination_city}</h1>
+        <p className="quote">Better to see something once than to hear about it a thousand times.</p>
         <div className="box row">
           <p>
             Price
@@ -72,7 +74,7 @@ export default function Details() {
           {trip?.description}
         </p>
 
-        <Link className="home-reserve-btn row" to={`/home/${trip?.id}/reserve`}>
+        <Link className="home-reserve-btn row" to={`/reserve/${trip?.id}`}>
           <AiOutlineSetting />
           Reserve
           <BsArrowRightCircle />

@@ -16,11 +16,11 @@ const SignUp = () => {
         details: [],
       }),
     );
-  }, []);
+  }, [dispatch]);
 
   return (
     <section className="session-page signup">
-      <div className="overlay">
+      <div className="over-lay">
         <div className="form-container">
           <div className="text-column">
             <h1>Create an account now!</h1>

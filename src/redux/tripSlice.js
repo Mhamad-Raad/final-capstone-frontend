@@ -44,7 +44,7 @@ export const deleteTrip = createAsyncThunk('trips/deleteTrip', async (tripId) =>
     },
     crossdomain: true,
   };
-  await axios.delete(`https://capstone-backend-gz9j.onrender.com/v1/trips/${tripId}`, config);
+  await axios.delete(`https://capstone-backend-gz9j.onrender.com/api/v1/trips/${tripId}`, config);
   return {
     id: tripId,
   };

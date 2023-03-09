@@ -1,7 +1,7 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
-import { fetchTrips } from '../../redux/tripSlice';
-import './ReservationItem.css';
+import { fetchTrips } from '../redux/tripSlice';
+import '../assets/stylesheets/reservation.css';
 
 export default function ReservationItem({ delay, reservation }) {
   const styles = {

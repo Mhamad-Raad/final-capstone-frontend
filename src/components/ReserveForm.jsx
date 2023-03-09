@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import '../assets/stylesheets/reserve-form.css';
+import '../assets/stylesheets/reservation.css';
 
 export default function ReserveForm({ trip, trips }) {
   const navigate = useNavigate();
@@ -21,7 +21,7 @@ export default function ReserveForm({ trip, trips }) {
 
     const token = localStorage.getItem('token');
 
-    fetch('http://https://capstone-backend-gz9j.onrender.com/api/v1/reservations', {
+    fetch('https://capstone-backend-gz9j.onrender.com/api/v1/reservations', {
       method: 'POST',
       body: JSON.stringify({
         user_id: user.id,
@@ -42,14 +42,14 @@ export default function ReserveForm({ trip, trips }) {
         navigate('/home');
       });
 
-    navigate('/reservations');
+    navigate('/my-reservations');
   };
 
   const destination = trip?.destination_city[0].toUpperCase() + trip?.destination_city.slice(1);
 
   return (
     <div className="reserve__container column">
-      {trip !== undefined ? <h1 className="reserve_title">{destination}</h1> : <h1 className="reserve_title">Reserve</h1>}
+      {trip !== undefined ? <h1 className="reserve_title">{destination}</h1> : <h1 className="reserve_title">Reserve a Trip</h1>}
       {trip !== undefined && (
         <p className="reserve_subtitle">
           {`${trip?.destination_city} - ${trip?.description}`}
@@ -89,8 +89,8 @@ export default function ReserveForm({ trip, trips }) {
           <option value="Sulaimaniyah">Sulaimaniyah</option>
           <option value="Erbil">Erbil</option>
         </select>
-        <input type="time" ref={timeRef} required />
-        <input type="date" ref={dateRef} required />
+        <input type="time" ref={timeRef} required className="reserve-form-time" />
+        <input type="date" ref={dateRef} required className="reserve-form-date" />
         <button type="button" onClick={reserveHandler} className="reserve-btn">
           Reserve
         </button>
