@@ -75,7 +75,7 @@ const AddTripForm = () => {
 
       <div>
         <div className="form-container">
-          <form onSubmit={handleSubmit} className="column">
+          <form onSubmit={handleSubmit} className="column" data-testid="form">
             <div className="form-group">
               <Rating
                 defaultValue={2.5}
@@ -132,7 +132,7 @@ const AddTripForm = () => {
               </label>
             </div>
 
-            <button type="submit" className="submit-btn">Add Trip</button>
+            <button type="submit" className="submit-btn" data-testid="addtrip-btn">Add Trip</button>
           </form>
         </div>
       </div>
