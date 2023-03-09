@@ -49,13 +49,13 @@ export default function ReserveForm({ trip, trips }) {
 
   return (
     <div className="reserve__container column">
-      {trip !== undefined ? <h1 className="reserve_title">{destination}</h1> : <h1 className="reserve_title">Reserve a Trip</h1>}
+      {trip !== undefined ? <h1 className="reserve_title">{destination}</h1> : <h1 className="reserve_title" data-testid="reserve-title">Reserve a Trip</h1>}
       {trip !== undefined && (
         <p className="reserve_subtitle">
           {`${trip?.destination_city} - ${trip?.description}`}
         </p>
       )}
-      <form className="reserve_form column">
+      <form className="reserve_form column" data-testid="form">
         <div className="first-row row">
           <input
             className="username"
@@ -91,7 +91,7 @@ export default function ReserveForm({ trip, trips }) {
         </select>
         <input type="time" ref={timeRef} required className="reserve-form-time" />
         <input type="date" ref={dateRef} required className="reserve-form-date" />
-        <button type="button" onClick={reserveHandler} className="reserve-btn">
+        <button type="button" onClick={reserveHandler} className="reserve-btn" data-testid="reserve-btn">
           Reserve
         </button>
       </form>
