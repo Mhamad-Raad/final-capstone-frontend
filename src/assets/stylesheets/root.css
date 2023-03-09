@@ -68,7 +68,7 @@
 }
 
 .close {
-  z-index: 100;
+  z-index: 1001;
   position: relative;
   width: 30px;
   height: 30px;
@@ -140,7 +140,7 @@
   top: 0;
   left: 0;
   background-color: var(--background);
-  z-index: 99;
+  z-index: 1000;
   border: none;
   justify-content: flex-start;
   align-items: center;

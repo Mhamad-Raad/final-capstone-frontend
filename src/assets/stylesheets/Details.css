@@ -106,7 +106,7 @@
     border-bottom-left-radius: 50%;
     border-top-left-radius: 50%;
     position: fixed;
-    z-index: 100;
+    z-index: 10;
   }
 
   .info {
