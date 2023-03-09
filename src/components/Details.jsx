@@ -10,7 +10,7 @@ import '../assets/stylesheets/Details.css';
 
 // the commented code is for future use
 
-export default function Details() {
+const Details = () => {
   const { id } = useParams();
 
   const dispatch = useDispatch();
@@ -83,3 +83,5 @@ export default function Details() {
     </div>
   );
 }
+
+export default Details;
