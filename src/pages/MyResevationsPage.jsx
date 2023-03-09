@@ -13,14 +13,19 @@ export default function MyReservations() {
   }, [dispatch]);
 
   return (
-    <ul className="my-reservations column">
-      {reservations.map((reservation, index) => (
-        <ReservationItem
-          key={reservation.id}
-          reservation={reservation}
-          delay={`1.${index}`}
-        />
-      ))}
-    </ul>
+    <div className="my-reservations-div">
+      <h1>Adventure Awaits</h1>
+      <p>Get a list of your reservations!</p>
+      <ul className="my-reservations column">
+        {reservations.map((reservation, index) => (
+          <ReservationItem
+            key={reservation.id}
+            reservation={reservation}
+            delay={`1.${index}`}
+          />
+        ))}
+      </ul>
+
+    </div>
   );
 }

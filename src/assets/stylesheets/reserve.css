@@ -2,7 +2,6 @@
   height: 100vh;
   width: 100%;
   position: relative;
-  z-index: -1;
   background-color: var(--dark-lemon-lime);
 }
 
@@ -11,5 +10,12 @@
   height: 100vh;
   width: 100%;
   z-index: 0;
-  opacity: 0.5;
+  opacity: 0.3;
+}
+
+@media screen and (min-width: 768px) {
+  .reserve-bg {
+    margin-left: 220px;
+    width: auto;
+  }
 }
