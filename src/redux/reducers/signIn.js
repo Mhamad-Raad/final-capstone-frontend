@@ -1,6 +1,4 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-// import { useDispatch } from 'react-redux';
-// import { getAllReversedTrips } from '../reserveSlice';
 
 export const fetchSignIn = createAsyncThunk(
   'session/signIn/fetch',
@@ -44,7 +42,6 @@ export const signInReducer = (builder) => {
       return newState;
     })
     .addCase(fetchSignIn.fulfilled, (state, action) => {
-      // const dispatch = useDispatch();
       localStorage.setItem('token', action.payload.token);
       localStorage.setItem('user', JSON.stringify(action.payload.user));
       const newState = {
@@ -53,8 +50,6 @@ export const signInReducer = (builder) => {
         user: action.payload.user,
         loading: false,
       };
-
-      // dispatch(getAllReversedTrips);
 
       return newState;
     })
