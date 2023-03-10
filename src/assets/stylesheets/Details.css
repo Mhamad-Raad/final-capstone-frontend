@@ -1,0 +1,161 @@
+.details {
+  width: 100%;
+  height: auto;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.bg_image {
+  width: 60%;
+  height: 100vh;
+  position: relative;
+  align-self: center;
+}
+
+.details-img {
+  width: 100%;
+  height: 99.8%;
+  object-fit: cover;
+}
+
+.back_button {
+  bottom: 50px;
+  left: 0;
+  border: none;
+  padding: 19px 25px;
+  color: var(--white);
+  font-size: 25px;
+  position: absolute;
+  padding-bottom: 9px;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  background: var(--dark-lemon-lime);
+}
+
+.info {
+  width: 38%;
+  height: 100vh;
+  align-items: flex-end;
+  padding: 7rem 3rem 0 0;
+}
+
+.info-title {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  color: var(--sea-blue);
+  line-height: 34px;
+  text-align: center;
+}
+
+.info-subtitle {
+  margin-bottom: 30px;
+}
+
+.quote {
+  padding-bottom: 2rem;
+  font-style: italic;
+  font-size: 1.2rem;
+  color: var(--dark-lemon-lime);
+}
+
+.box {
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  padding: 11px 15px;
+  background-color: var(--albaster);
+  font-size: 1.5rem;
+}
+
+.darkbox {
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  padding: 11px 15px;
+  font-size: 1.5rem;
+  background-color: #dddbd8;
+}
+
+.description {
+  width: 100%;
+  padding: 20px 12px;
+  font-size: 1.5rem;
+  font-style: italic;
+  text-transform: capitalize;
+  color: var(--cadet-gray);
+}
+
+.home-reserve-btn {
+  margin-top: 50px;
+  padding: 15px;
+  width: 160px;
+  border: none;
+  color: white;
+  font-size: 18px;
+  border-radius: 50px;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--dark-lemon-lime);
+}
+
+@media (max-width: 768px) {
+  .details.row {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .bg_image {
+    width: 100%;
+    height: 30vh;
+    margin-bottom: 20px;
+  }
+
+  .back_button {
+    top: 10px;
+    bottom: auto;
+    right: 0;
+    left: auto;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 50%;
+    border-top-left-radius: 50%;
+    position: fixed;
+    z-index: 10;
+  }
+
+  .info {
+    width: 90%;
+    padding: 0 10px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .home-reserve-btn {
+    margin-bottom: 100px;
+  }
+
+  .description {
+    font-size: 14px;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .info-title {
+    text-align: right;
+  }
+
+  .details {
+    margin-left: 220px;
+    width: auto;
+  }
+}
+
+@media screen and (min-width: 1110px) {
+  .info {
+    width: 30%;
+    padding: 7rem 4rem 0 0;
+  }
+}

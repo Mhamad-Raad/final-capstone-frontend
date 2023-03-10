@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RootLayout should match the snapshot 1`] = `
+<div
+  className="my-reservations-div"
+>
+  <h1>
+    Adventure Awaits
+  </h1>
+  <p>
+    Get a list of your reservations!
+  </p>
+  <ul
+    className="my-reservations column"
+  />
+</div>
+`;

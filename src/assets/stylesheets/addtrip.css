@@ -1,0 +1,97 @@
+@import "form.css";
+
+.add-trip-page {
+  height: 100%;
+  padding: 2rem;
+  background: var(--white);
+}
+
+.add-trip-page > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+}
+
+.trip-header {
+  text-align: center;
+}
+
+.add-trip-page .form-container {
+  width: 80vw;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+
+.add-trip-page form {
+  width: 90%;
+  gap: 2rem;
+}
+
+.form-container .form-image label {
+  width: inherit;
+  background: transparent;
+  box-shadow: none;
+  align-items: center;
+}
+
+.form-container .form-image input {
+  width: inherit;
+  padding: inherit;
+}
+
+.form-container textarea {
+  height: 200px;
+  height: 110px;
+}
+
+form input[type="file"] {
+  width: 100%;
+  border: none;
+  padding: 1.9rem 0;
+}
+
+.add-trip-page input[type="file"]::-webkit-file-upload-button {
+  background: var(--dark-lemon-lime);
+  padding: 1rem 1.75rem;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  color: var(--platinum);
+  align-items: center;
+}
+
+.add-trip-page .form-container .submit-btn {
+  border-radius: 8px;
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .add-trip-page {
+    margin-left: 220px;
+  }
+
+  .add-trip-page .form-container {
+    width: 50vw;
+  }
+}
+
+@media screen and (min-width: 1110px) {
+  .add-trip-page {
+    margin-left: 220px;
+  }
+
+  .add-trip-page .form-container {
+    width: 35vw;
+    padding: 3rem 0;
+  }
+
+  .add-trip-page div {
+    height: 85%;
+  }
+}

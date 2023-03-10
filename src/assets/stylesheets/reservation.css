@@ -1,0 +1,254 @@
+/* ----------Reserve---------- */
+
+.reserve-bg {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  background-color: var(--dark-lemon-lime);
+}
+
+.reserve-img {
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  z-index: 0;
+  opacity: 0.3;
+}
+
+@media screen and (min-width: 768px) {
+  .reserve-bg {
+    margin-left: 220px;
+    width: auto;
+  }
+}
+
+/* ----------Reservation Item---------- */
+
+.reservation-item {
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7rem 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  width: 90%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: all 1s ease-in-out;
+  animation: downToUp ease-in-out;
+  max-width: 750px;
+  max-height: 47px;
+}
+
+@keyframes downToUp {
+  0% {
+    transform: translateY(2000%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.destination-city {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  color: #000;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 150px;
+}
+
+.departure-city {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #7c7c7c;
+}
+
+.reservation-price {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  color: #000;
+  text-align: right;
+}
+
+.reservation-date {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #7c7c7c;
+}
+
+@media (max-width: 768px) {
+  .reservation-item {
+    width: 100%;
+    padding: 1rem 1rem;
+  }
+
+  .destination-city {
+    font-size: 1.5rem;
+  }
+
+  .departure-city {
+    font-size: 1rem;
+  }
+
+  .reservation-price {
+    font-size: 1.5rem;
+  }
+
+  .reservation-date {
+    font-size: 1rem;
+  }
+}
+
+/* ----------Reservation Form---------- */
+
+.reserve__container {
+  border-radius: 10px;
+  padding: 20px;
+  margin: 0 auto;
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  gap: 15px;
+}
+
+label {
+  padding: 0;
+}
+
+label > input,
+.first-row > select {
+  background-color: transparent;
+  border: 1px solid var(--metalic-brown);
+}
+
+.first-row {
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.reserve_form > input,
+.reserve_form > select {
+  background-color: transparent;
+  border: 1px solid var(--metalic-brown);
+}
+
+.reserve-form-time,
+.reserve-form-date {
+  padding: 5px 10px;
+  border-radius: 8px;
+}
+
+.username {
+  background-color: transparent;
+  width: 50%;
+  height: 4rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--metalic-brown);
+  box-shadow: none;
+  border-radius: 8px;
+  border: 1px solid var(--metalic-brown);
+  padding-left: 10px;
+}
+
+.reserve_title {
+  font-size: 3rem;
+  padding: 4rem 0;
+  font-weight: bolder;
+  color: var(--metalic-brown);
+  text-align: center;
+}
+
+.trip-input {
+  width: 50%;
+  height: 4rem;
+  padding: 0 0.7em;
+  border-radius: 8px;
+  font-weight: bold;
+  background: var(--platinum);
+  border: none;
+  color: var(--metalic-brown);
+}
+
+.reserve_subtitle {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  color: var(--metalic-brown);
+  text-align: center;
+}
+
+.reserve_form {
+  gap: 8px;
+}
+
+.departure-city-input {
+  display: flex;
+  width: 100%;
+  height: 4rem;
+  padding: 0 0.7em;
+  border-radius: 8px;
+  font-weight: bold;
+  background: var(--platinum);
+  border: none;
+  color: var(--metalic-brown);
+}
+
+.reserve-btn {
+  margin: 15px auto;
+  margin-bottom: 0;
+  width: 125px;
+  height: 4rem;
+  border-radius: 8px;
+  font-weight: bold;
+  background: var(--metalic-brown);
+  border: none;
+  color: var(--platinum);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .reserve__container {
+    width: 80%;
+  }
+}
+
+/* ----------My Reservations---------- */
+
+.my-reservations-div h1 {
+  font-size: 3rem;
+  text-align: center;
+  padding: 5rem 0 0 0;
+}
+
+.my-reservations-div p {
+  color: var(--cadet-gray);
+  font-size: 1.2rem;
+  text-align: center;
+  font-style: italic;
+  padding: 1rem 0;
+  letter-spacing: 1px;
+}
+
+.my-reservations {
+  gap: 10px;
+  width: 90%;
+  padding: 10px;
+  align-items: center;
+  padding-top: 2rem;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .my-reservations-div {
+    width: auto;
+    margin-left: 220px;
+  }
+
+  .my-reservations-div h1 {
+    padding: 3rem 0 0 0;
+  }
+}

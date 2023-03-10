@@ -1,0 +1,326 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing Add Trip should match the snapshot 1`] = `
+<section
+  className="add-trip-page"
+>
+  <h1>
+    Add a New Trip
+  </h1>
+  <h2>
+    Fill out the informtaion below to add a new trip!
+  </h2>
+  <div>
+    <div
+      className="form-container"
+    >
+      <form
+        className="column"
+        data-testid="form"
+        onSubmit={[Function]}
+      >
+        <div
+          className="form-group"
+        >
+          <span
+            aria-label={null}
+            className="MuiRating-root MuiRating-sizeLarge rates-trip css-jue3ft-MuiRating-root"
+            onMouseLeave={[Function]}
+            onMouseMove={[Function]}
+            role={null}
+          >
+            <label
+              className="css-dqr9h-MuiRating-label"
+              htmlFor=":r1:"
+            >
+              <span
+                className="MuiRating-icon MuiRating-iconFilled css-7qmtgc-MuiRating-icon"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="MuiSvgIcon-root MuiSvgIcon-fontSizeInherit css-1vooibu-MuiSvgIcon-root"
+                  data-testid="StarIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                  />
+                </svg>
+              </span>
+              <span
+                className="MuiRating-visuallyHidden"
+              >
+                1 Star
+              </span>
+            </label>
+            <input
+              checked={false}
+              className="MuiRating-visuallyHidden"
+              disabled={false}
+              id=":r1:"
+              name=":r0:"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              type="radio"
+              value={1}
+            />
+            <label
+              className="css-dqr9h-MuiRating-label"
+              htmlFor=":r2:"
+            >
+              <span
+                className="MuiRating-icon MuiRating-iconFilled css-7qmtgc-MuiRating-icon"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="MuiSvgIcon-root MuiSvgIcon-fontSizeInherit css-1vooibu-MuiSvgIcon-root"
+                  data-testid="StarIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                  />
+                </svg>
+              </span>
+              <span
+                className="MuiRating-visuallyHidden"
+              >
+                2 Stars
+              </span>
+            </label>
+            <input
+              checked={false}
+              className="MuiRating-visuallyHidden"
+              disabled={false}
+              id=":r2:"
+              name=":r0:"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              type="radio"
+              value={2}
+            />
+            <label
+              className="css-dqr9h-MuiRating-label"
+              htmlFor=":r3:"
+            >
+              <span
+                className="MuiRating-icon MuiRating-iconFilled css-7qmtgc-MuiRating-icon"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="MuiSvgIcon-root MuiSvgIcon-fontSizeInherit css-1vooibu-MuiSvgIcon-root"
+                  data-testid="StarIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                  />
+                </svg>
+              </span>
+              <span
+                className="MuiRating-visuallyHidden"
+              >
+                3 Stars
+              </span>
+            </label>
+            <input
+              checked={true}
+              className="MuiRating-visuallyHidden"
+              disabled={false}
+              id=":r3:"
+              name=":r0:"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              type="radio"
+              value={3}
+            />
+            <label
+              className="css-dqr9h-MuiRating-label"
+              htmlFor=":r4:"
+            >
+              <span
+                className="MuiRating-icon MuiRating-iconEmpty css-1c99szj-MuiRating-icon"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="MuiSvgIcon-root MuiSvgIcon-fontSizeInherit css-1vooibu-MuiSvgIcon-root"
+                  data-testid="StarBorderIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z"
+                  />
+                </svg>
+              </span>
+              <span
+                className="MuiRating-visuallyHidden"
+              >
+                4 Stars
+              </span>
+            </label>
+            <input
+              checked={false}
+              className="MuiRating-visuallyHidden"
+              disabled={false}
+              id=":r4:"
+              name=":r0:"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              type="radio"
+              value={4}
+            />
+            <label
+              className="css-dqr9h-MuiRating-label"
+              htmlFor=":r5:"
+            >
+              <span
+                className="MuiRating-icon MuiRating-iconEmpty css-1c99szj-MuiRating-icon"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="MuiSvgIcon-root MuiSvgIcon-fontSizeInherit css-1vooibu-MuiSvgIcon-root"
+                  data-testid="StarBorderIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z"
+                  />
+                </svg>
+              </span>
+              <span
+                className="MuiRating-visuallyHidden"
+              >
+                5 Stars
+              </span>
+            </label>
+            <input
+              checked={false}
+              className="MuiRating-visuallyHidden"
+              disabled={false}
+              id=":r5:"
+              name=":r0:"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              type="radio"
+              value={5}
+            />
+            <label
+              className="MuiRating-label MuiRating-pristine css-dqr9h-MuiRating-label"
+            >
+              <input
+                checked={false}
+                className="MuiRating-visuallyHidden"
+                id=":r0:-empty"
+                name=":r0:"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                type="radio"
+                value=""
+              />
+              <span
+                className="MuiRating-visuallyHidden"
+              >
+                Empty
+              </span>
+            </label>
+          </span>
+          <span
+            className="row rating-row"
+          />
+        </div>
+        <div
+          className="form-group form-image"
+        >
+          <label
+            htmlFor="image"
+          >
+            <input
+              accept=".jpg, .jpeg, .png"
+              id="image"
+              onChange={[Function]}
+              type="file"
+            />
+          </label>
+        </div>
+        <div
+          className="form-group"
+        >
+          <label
+            htmlFor="number"
+          >
+            <input
+              className="add-trip-price"
+              onChange={[Function]}
+              required={true}
+              type="number"
+              value=""
+            />
+            <span
+              className="row"
+            >
+              Price
+            </span>
+          </label>
+        </div>
+        <div
+          className="form-group"
+        >
+          <label
+            htmlFor="text"
+          >
+            <input
+              onChange={[Function]}
+              required={true}
+              type="text"
+              value=""
+            />
+            <span>
+              Destination City
+            </span>
+          </label>
+        </div>
+        <div
+          className="form-group"
+        >
+          <label
+            htmlFor="text"
+          >
+            <textarea
+              onChange={[Function]}
+              required={true}
+              type="text"
+              value=""
+            />
+            <span>
+              Description
+            </span>
+          </label>
+        </div>
+        <button
+          className="submit-btn"
+          data-testid="addtrip-btn"
+          type="submit"
+        >
+          Add Trip
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+`;

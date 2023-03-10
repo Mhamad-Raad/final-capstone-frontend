@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px var(--grey);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--dark-lemon-lime);
+}
+
+:root {
+  --white: #fff;
+  --red: #e20d0d;
+  --grey: #b9b9b9;
+  --flax: #edd590;
+  --sea-blue: #69c;
+  --platinum: #e2e3e5;
+  --cadet-gray: #94a6a4;
+  --yellow-red: #f0bd59;
+  --albaster: #efece6;
+  --overlay: #afdc0cc2;
+  --background: #8fb704bd;
+  --black-olive: #3b3735;
+  --dark-vanilla: #c3cc9b;
+  --crystal-blue: #62aea3;
+  --dark-lemon-lime: #8cb302;
+  --spanish-yellow: #f7b217;
+  --metalic-brown: #ad4708;
+  --metalic-orange: #d46d0d;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+body {
+  height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+p {
+  background-color: transparent;
+}
+
+button {
+  cursor: pointer;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.row {
+  flex-direction: row;
+}
+
+.column,
+.row {
+  display: flex;
+}
+
+/* ----------Message---------- */
+
+.msg {
+  text-align: center;
+  font-style: italic;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  color: #768886;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+}
+
+.success-msg {
+  color: var(--dark-lemon-lime);
+}
+
+.error-msg {
+  color: var(--red);
+}
+
+.loading-msg {
+  color: var(--sea-blue);
+}
+
+.error-handler {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 2rem;
+  font-style: italic;
+}
+
+/* ----------Dot Seperator---------- */
+.dot-seperator {
+  letter-spacing: 3px;
+  color: rgb(205, 205, 205);
+  font-size: 10px;
+  font-weight: 600;
+}
+
+/* ----------Footer---------- */
+
+.footer {
+  position: absolute;
+  padding: 0 3.5rem 3.5rem 0.5rem;
+  font-style: italic;
+  bottom: 0;
+  color: var(--metalic-brown);
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    padding: 0 4.5rem 4.5rem 4.5rem;
+  }
+}

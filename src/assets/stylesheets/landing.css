@@ -1,0 +1,181 @@
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  position: absolute;
+  display: flex;
+}
+
+.landing_page {
+  height: 100vh;
+  background-image: url('../images/mobile.svg');
+  background-color: #e6f0d0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: var(--black-olive);
+}
+
+.img {
+  display: none;
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  padding: 5em 2.8em;
+  text-align: center;
+  gap: 3em;
+  height: 100%;
+}
+
+.title {
+  gap: 3rem;
+  display: flex;
+  flex-direction: column;
+  padding: 5rem 0 0 0;
+  height: 100%;
+  text-align: left;
+}
+
+.text {
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  width: 70vw;
+}
+
+.text h1 {
+  font-size: 3rem;
+  line-height: 33px;
+}
+
+.text h2 {
+  font-size: 1.3rem;
+  font-weight: normal;
+}
+
+.list_btn {
+  display: flex;
+  gap: 2rem;
+  padding-top: 3rem;
+}
+
+.list_btn button {
+  border-radius: 8px;
+  color: var(--albaster);
+  font-size: 1.7em;
+  letter-spacing: 2px;
+  font-weight: 700;
+  width: 130px;
+  height: 38px;
+  text-transform: uppercase;
+  border: 1px solid var(--black-olive);
+}
+
+.sign_up_btn {
+  background: var(--black-olive);
+}
+
+.sign_in_btn {
+  background: transparent;
+}
+
+.sign_in_btn a {
+  color: var(--black-olive);
+}
+
+.sign_up_btn:hover,
+.sign_in_btn:hover {
+  box-shadow: 2px 2px 3px 1px #0e0e0e9e;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .logo {
+    padding: 3rem;
+    width: 45vw;
+  }
+
+  .landing_page {
+    padding: 2.3rem;
+    background-image: none;
+    background-size: contain;
+    background-position: right;
+  }
+
+  .img {
+    width: 55vw;
+    display: flex;
+
+    /* background: #e6f0d0; */
+    background-color: var(--white);
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  .heading {
+    gap: 0;
+    padding: 0;
+    flex-direction: row;
+  }
+
+  .title {
+    width: 45vw;
+    padding: 5rem 3rem;
+    text-align: left;
+    background: var(--white);
+    justify-content: center;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+  }
+
+  .text {
+    width: auto;
+  }
+
+  .text h1 {
+    justify-content: center;
+  }
+
+  .list_btn {
+    padding-top: 2rem;
+    justify-content: flex-start;
+  }
+
+  .list_btn button {
+    font-size: 1.25rem;
+    border: 1px solid var(--dark-lemon-lime);
+  }
+
+  .sign_up_btn {
+    background: var(--dark-lemon-lime);
+  }
+
+  .sign_in_btn {
+    background: transparent;
+  }
+
+  .sign_in_btn a {
+    color: var(--dark-lemon-lime);
+  }
+}
+
+@media screen and (min-width: 1056px) {
+  .logo {
+    padding: 5rem 4.5rem 0 4.5rem;
+  }
+
+  .title {
+    padding: 5rem;
+  }
+
+  .text {
+    gap: 2rem;
+  }
+}
+
+@media screen and(min-width: 1440px) {
+  .title h2 {
+    width: 30vw;
+  }
+}
